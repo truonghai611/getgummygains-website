@@ -1,0 +1,13 @@
+server {
+    listen ${PORT};
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # Don't ship the git/deploy metadata files as public routes
+    location ~ /\.(git|env) { deny all; }
+
+    location / {
+        try_files $uri $uri.html $uri/ =404;
+    }
+}
