@@ -4,6 +4,11 @@ server {
     root /usr/share/nginx/html;
     index index.html;
 
+    # Railway terminates TLS and proxies to this container on an internal
+    # port (${PORT}), so nginx must not bake that port into redirect
+    # Location headers - keep them relative (path-only).
+    absolute_redirect off;
+
     # Don't ship the git/deploy metadata files as public routes
     location ~ /\.(git|env) { deny all; }
 
