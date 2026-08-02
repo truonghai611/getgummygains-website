@@ -12,9 +12,20 @@ server {
     # Don't ship the git/deploy metadata files as public routes
     location ~ /\.(git|env) { deny all; }
 
-    # Canonicalize: redirect explicit .html URLs to the extensionless version
-    location = /index.html { return 301 /; }
-    location ~ ^/(.+)\.html$ { return 301 /$1; }
+    # Canonicalize: redirect explicit .html URLs to the extensionless version.
+    # IMPORTANT: match on $request_uri (the client's original URI), not on
+    # location blocks. The "index index.html;" directive above performs an
+    # internal rewrite of "/" to "/index.html" and re-enters location
+    # matching, so a "location = /index.html { return 301 /; }" block would
+    # also fire on that internal rewrite - causing every request for "/" to
+    # 301-redirect to itself in an infinite loop. $request_uri is unaffected
+    # by internal rewrites, so these checks only match real client requests.
+    if ($request_uri = "/index.html") {
+        return 301 /;
+    }
+    if ($request_uri ~ "^/(.+)\.html$") {
+        return 301 /$1;
+    }
 
     location / {
         try_files $uri $uri.html $uri/ =404;
