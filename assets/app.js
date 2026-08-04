@@ -1,3 +1,16 @@
+/* Google tag (gtag.js) — GA4 property for getgummygains.com */
+(function () {
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C0MW3RSC76';
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-C0MW3RSC76');
+})();
+
 /* GummyGains — mobile nav, sticky CTA, dose/cost calculator */
 (function () {
   'use strict';
@@ -85,65 +98,6 @@
     });
 
     run();
-  }
-
-  /* ---- routine quiz ---- */
-  var quiz = document.getElementById('quiz');
-  if (quiz) {
-    var qAnswers = {};
-    var qResults = {
-      electrolytes: {
-        title: 'Creatine + Electrolytes is the closest match',
-        body: "You are already using electrolytes, so a combined format can cut two products down to one on training days.",
-        cta: 'See the creatine + electrolytes guide',
-        href: 'creatine-with-electrolytes'
-      },
-      sugarfree: {
-        title: 'Unflavored stick packs are the closest match',
-        body: "You want the full dose without added sugar \u2014 an unflavored stick pack gets you 5\u00A0g with nothing extra.",
-        cta: 'See stick packs vs. gummies for travel',
-        href: 'creatine-for-travel'
-      },
-      gummies: {
-        title: 'Gummies are the closest match',
-        body: "You are on the move or you skip doses sometimes \u2014 the format that removes the most friction wins.",
-        cta: 'See which gummies passed independent lab testing',
-        href: 'best-creatine-gummies-2026'
-      },
-      powder: {
-        title: 'Plain powder may honestly suit you best',
-        body: "You are consistent at home and sugar is not a concern \u2014 bulk powder is the cheapest, most precise option. We are not going to pretend gummies are the better buy here.",
-        cta: 'See the honest gummies vs. powder comparison',
-        href: 'creatine-gummies-vs-powder'
-      }
-    };
-
-    var qButtons = quiz.querySelectorAll('.quiz-opt');
-    for (var qi = 0; qi < qButtons.length; qi++) {
-      qButtons[qi].addEventListener('click', function () {
-        var q = this.getAttribute('data-q');
-        var v = this.getAttribute('data-v');
-        qAnswers[q] = v;
-        var group = quiz.querySelectorAll('.quiz-opt[data-q="' + q + '"]');
-        for (var gi = 0; gi < group.length; gi++) { group[gi].classList.remove('sel'); }
-        this.classList.add('sel');
-        if (Object.keys(qAnswers).length === 4) { showQuizResult(); }
-      });
-    }
-
-    var showQuizResult = function () {
-      var key;
-      if (qAnswers['4'] === 'yes') { key = 'electrolytes'; }
-      else if (qAnswers['3'] === 'yes') { key = 'sugarfree'; }
-      else if (qAnswers['1'] === 'onthego' || qAnswers['2'] === 'often') { key = 'gummies'; }
-      else { key = 'powder'; }
-
-      var r = qResults[key];
-      var out = document.getElementById('quiz-result');
-      out.innerHTML = '<h3>' + r.title + '</h3><p>' + r.body + '</p><a class="btn" href="' + r.href + '">' + r.cta + ' \u2192</a>';
-      out.classList.add('show');
-      out.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    };
   }
 
   /* ---- current year ---- */
