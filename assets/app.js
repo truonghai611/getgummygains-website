@@ -160,8 +160,46 @@
     }
   }
 
-  /* ---- behavior analytics: scroll depth + affiliate outbound clicks ---- */
+  /* ---- behavior analytics: source attribution, money-page views, scroll depth + affiliate outbound clicks ---- */
   if (typeof gtag === 'function') {
+    var params = new URLSearchParams(location.search);
+    var referrerHost = '';
+    try { referrerHost = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+    var isChatGPT = params.get('utm_source') === 'chatgpt.com' || /(^|\.)chatgpt\.com$/.test(referrerHost);
+    var trafficSource = isChatGPT ? 'chatgpt' : (params.get('utm_source') || referrerHost || 'direct');
+    var sourceContext = {
+      traffic_source: trafficSource,
+      is_chatgpt_referral: isChatGPT ? 'yes' : 'no',
+      utm_source: params.get('utm_source') || '',
+      utm_medium: params.get('utm_medium') || '',
+      utm_campaign: params.get('utm_campaign') || '',
+      utm_content: params.get('utm_content') || '',
+      landing_page: sessionStorage.getItem('gg_landing_page') || location.pathname
+    };
+    if (!sessionStorage.getItem('gg_landing_page')) {
+      sessionStorage.setItem('gg_landing_page', location.pathname);
+      sourceContext.landing_page = location.pathname;
+    }
+    if (!sessionStorage.getItem('gg_traffic_source')) {
+      sessionStorage.setItem('gg_traffic_source', trafficSource);
+    } else if (trafficSource === 'direct') {
+      sourceContext.traffic_source = sessionStorage.getItem('gg_traffic_source');
+    }
+
+    var moneyPages = ['/best-creatine-gummies-2026', '/create-creatine-gummies-review', '/creatine-gummies-lab-tested', '/best-creatine-gummies-for-women', '/creatine-gummies-vs-powder', '/creatine-dose-calculator'];
+    if (moneyPages.indexOf(location.pathname.replace(/\/$/, '')) !== -1) {
+      gtag('event', 'view_money_page', Object.assign({
+        page_path: location.pathname,
+        page_title: document.title
+      }, sourceContext));
+    }
+    if (isChatGPT) {
+      gtag('event', 'chatgpt_referral_landing', Object.assign({
+        page_path: location.pathname,
+        page_title: document.title
+      }, sourceContext));
+    }
+
     var seenDepth = {};
     var markDepth = function (pct) {
       if (seenDepth[pct]) { return; }
@@ -186,12 +224,15 @@
         else if (a.closest('.pick')) { position = 'product_card'; }
         else if (a.closest('.quiz-result')) { position = 'quiz_result'; }
         else if (a.closest('.value-eq') || (a.previousElementSibling && a.previousElementSibling.classList && a.previousElementSibling.classList.contains('value-eq'))) { position = 'value_equation'; }
-        gtag('event', 'affiliate_outbound_click', {
+        var explicitPosition = a.getAttribute('data-cta-position');
+        if (explicitPosition) { position = explicitPosition; }
+        gtag('event', 'affiliate_outbound_click', Object.assign({
           page_path: location.pathname,
+          link_id: a.getAttribute('data-link-id') || '',
           link_url: a.href,
           cta_position: position,
           link_text: (a.textContent || '').trim().slice(0, 60)
-        });
+        }, sourceContext));
       });
     });
   }
