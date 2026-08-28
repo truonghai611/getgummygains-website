@@ -217,7 +217,7 @@
     window.addEventListener('scroll', onScrollDepth, { passive: true });
     onScrollDepth();
 
-    document.querySelectorAll('a[href*="trycreate.co"],a[href*="getswoly.com"],a[href*="bulksupplements.com"]').forEach(function (a) {
+    document.querySelectorAll('a[href*="trycreate.co"],a[href*="bulksupplements.com"]').forEach(function (a) {
       a.addEventListener('click', function () {
         var position = 'inline';
         if (a.closest('.sticky')) { position = 'sticky'; }

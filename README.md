@@ -63,10 +63,8 @@ website/
 1. **Affiliate — Create Wellness: XONG (01/08/2026).** Link thật đã gắn sẵn trong
    `best-creatine-gummies-2026.html`: `https://trycreate.co/15-9KD`. Theo dõi ở
    https://trycreate.superfiliate.com/portal/home (tab Insights).
-2. **Affiliate — SWOLY: Đang chờ duyệt** (nộp đơn 01/08/2026, xem tại
-   https://collabs.shopify.com/collabs, tab "Pending"). Nút SWOLY trên site vẫn tạm trỏ về
-   `getswoly.com` (link thường) — dòng `<!-- TODO(Henry): swap the href... -->` trong
-   `best-creatine-gummies-2026.html` cần cập nhật ngay khi được duyệt.
+2. **Affiliate — SWOLY: không ưu tiên.** Site không còn CTA mua SWOLY hoặc link ngoài tới
+   `getswoly.com`. Trang review được giữ như nội dung thông tin và chuyển người đọc về Create.
 3. **Đọc kỹ điều khoản PPC** của từng chương trình trước khi định chạy quảng cáo trả phí — theo
    file research, phần lớn cấm bid brand keyword.
 4. **Không tự nhận đã "test" sản phẩm** nếu bạn chưa thực sự mua và dùng. Nội dung hiện tại cố
