@@ -136,6 +136,15 @@ border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0 0 16px}
 .pcbox li{margin:.25em 0}
 .pros{background:var(--pass-bg)}.pros h4{color:#0A6B3D}
 .cons{background:var(--warn-bg)}.cons h4{color:var(--warn)}
+.pcbox.neutral{background:var(--bg-3)}.pcbox.neutral h4{color:var(--ink-2)}
+
+/* ---------- value equation (why the next step is low-risk) ---------- */
+.ve-label{font-size:12.5px;font-weight:800;letter-spacing:.03em;color:var(--muted);margin:22px 0 8px}
+.value-eq{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:0 0 18px}
+@media(min-width:680px){.value-eq{grid-template-columns:repeat(4,1fr)}}
+.value-eq div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 13px}
+.value-eq b{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--cta);margin-bottom:4px}
+.value-eq p{margin:0;font-size:13.5px;line-height:1.4;color:var(--ink-2)}
 
 /* ---------- badges ---------- */
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;
