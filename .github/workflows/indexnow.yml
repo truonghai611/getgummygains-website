@@ -1,0 +1,62 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "sitemap.xml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Build URL list
+        shell: bash
+        run: |
+          set -euo pipefail
+          SITE="https://getgummygains.com"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || git diff --name-only HEAD^ HEAD | grep -qx "sitemap.xml"; then
+            sed -n 's:.*<loc>\(.*\)</loc>.*:\1:p' sitemap.xml > /tmp/indexnow-urls.txt
+          else
+            git diff --name-only --diff-filter=ACDMRT HEAD^ HEAD |
+              while IFS= read -r file; do
+                case "$file" in
+                  index.html) printf '%s/\n' "$SITE" ;;
+                  *.html) printf '%s/%s\n' "$SITE" "${file%.html}" ;;
+                esac
+              done > /tmp/indexnow-urls.txt
+          fi
+          sort -u /tmp/indexnow-urls.txt -o /tmp/indexnow-urls.txt
+          test -s /tmp/indexnow-urls.txt
+
+      - name: Submit changed URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          KEY="cb5ed56a846d444089d11c93e366f389"
+          jq -n \
+            --arg host "getgummygains.com" \
+            --arg key "$KEY" \
+            --arg keyLocation "https://getgummygains.com/cb5ed56a846d444089d11c93e366f389.txt" \
+            --rawfile urls /tmp/indexnow-urls.txt \
+            '{host:$host,key:$key,keyLocation:$keyLocation,urlList:($urls|split("\n")|map(select(length>0)))}' \
+            > /tmp/indexnow-payload.json
+          code=$(curl --silent --show-error --output /tmp/indexnow-response.txt --write-out "%{http_code}" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data-binary @/tmp/indexnow-payload.json \
+            https://api.indexnow.org/indexnow)
+          cat /tmp/indexnow-response.txt
+          if [ "$code" != "200" ] && [ "$code" != "202" ]; then
+            echo "IndexNow returned HTTP $code"
+            exit 1
+          fi
+          echo "IndexNow accepted $(wc -l < /tmp/indexnow-urls.txt) URL(s) with HTTP $code."
