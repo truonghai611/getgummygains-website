@@ -31,6 +31,16 @@ server {
         return 301 /$1;
     }
 
+
+    # Consolidated pages (Sept 2026) - merged into stronger pages, 301 permanently.
+    location = /create-creatine-monohydrate-gummies-review { return 301 /create-creatine-gummies-review; }
+    location = /create-creatine-for-women { return 301 /create-creatine-gummies-review; }
+    location = /create-lemonade-collection-review { return 301 /create-creatine-gummies-review; }
+    location = /best-creatine-electrolyte-mix { return 301 /creatine-with-electrolytes; }
+    location = /creatine-electrolytes-vs-separate { return 301 /creatine-with-electrolytes; }
+    location = /creatine-stick-packs-review { return 301 /creatine-gummies-vs-stick-packs; }
+    location = /best-creatine-gummies-for-men { return 301 /best-creatine-gummies-2026; }
+
     location / {
         try_files $uri $uri.html $uri/ =404;
     }
