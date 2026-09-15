@@ -30,7 +30,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Met label claim"
@@ -45,7 +45,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Met label claim"
@@ -60,7 +60,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Met label claim"
@@ -75,7 +75,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Met label claim"
@@ -90,7 +90,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Met label claim"
@@ -105,7 +105,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Met label claim"
@@ -120,7 +120,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Did not meet label claim"
@@ -135,7 +135,7 @@
       "measured": "",
       "creatinine_flagged": "yes",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 13,
+      "nsf_certified_for_sport_gummy_listings": "13",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Large creatinine levels detected"
@@ -150,7 +150,7 @@
       "measured": "",
       "creatinine_flagged": "yes",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Large creatinine levels detected"
@@ -165,7 +165,7 @@
       "measured": "",
       "creatinine_flagged": "yes",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 15,
+      "nsf_certified_for_sport_gummy_listings": "15",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Large creatinine levels detected; passed two later rounds"
@@ -180,7 +180,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Did not meet label claim"
@@ -195,7 +195,7 @@
       "measured": "",
       "creatinine_flagged": "no",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
       "notes": "Did not meet label claim"
@@ -210,7 +210,7 @@
       "measured": "6.3 g",
       "creatinine_flagged": "yes",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 6,
+      "nsf_certified_for_sport_gummy_listings": "6",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis",
       "notes": "Measurable creatinine present despite passing"
@@ -225,10 +225,10 @@
       "measured": "4.59 g",
       "creatinine_flagged": "yes",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 15,
+      "nsf_certified_for_sport_gummy_listings": "15",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis",
-      "notes": "Measurable creatinine present despite passing"
+      "notes": "Measurable creatinine present despite passing; Label claim 4.5 g confirmed by GummyGains from a retail tub (Watermelon, 90-count) photographed 2026-09-15"
     },
     {
       "product": "DivinusLabs creatine gummies",
@@ -240,7 +240,7 @@
       "measured": "trace (~800 gummies for 5 g)",
       "creatinine_flagged": "no",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis",
       "notes": "Trace creatine only"
@@ -255,7 +255,7 @@
       "measured": "0.005 g (~2,000 gummies for 5 g)",
       "creatinine_flagged": "no",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis",
       "notes": "Trace creatine only"
@@ -270,7 +270,7 @@
       "measured": "none detected",
       "creatinine_flagged": "no",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis",
       "notes": "Failed two separate lots; brand advertised its own certified testing"
@@ -285,7 +285,7 @@
       "measured": "none detected",
       "creatinine_flagged": "no",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis",
       "notes": "None detected"
@@ -315,7 +315,7 @@
       "measured": "5.55 g",
       "creatinine_flagged": "unknown",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": "Slight overage"
@@ -330,7 +330,7 @@
       "measured": "within range of claim",
       "creatinine_flagged": "unknown",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": "Per-product grams not published"
@@ -345,7 +345,7 @@
       "measured": "within range of claim",
       "creatinine_flagged": "unknown",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": "Per-product grams not published"
@@ -356,14 +356,14 @@
       "round": "Round 3",
       "lab": "James Smith / Eurofins",
       "test_date": "2025-07",
-      "label_claim": "",
+      "label_claim": "4.5 g",
       "measured": "within range of claim",
       "creatinine_flagged": "unknown",
       "result": "Pass",
-      "nsf_certified_for_sport_gummy_listings": 15,
+      "nsf_certified_for_sport_gummy_listings": "15",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
-      "notes": "Second consecutive pass"
+      "notes": "Second consecutive pass; Label claim read from retail tub 2026-09-15"
     },
     {
       "product": "Ovrload creatine gummies",
@@ -375,7 +375,7 @@
       "measured": "borderline undetectable",
       "creatinine_flagged": "unknown",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": ""
@@ -390,7 +390,7 @@
       "measured": "borderline undetectable",
       "creatinine_flagged": "unknown",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": ""
@@ -405,7 +405,7 @@
       "measured": "borderline undetectable",
       "creatinine_flagged": "unknown",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": ""
@@ -420,7 +420,7 @@
       "measured": "borderline undetectable",
       "creatinine_flagged": "unknown",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": ""
@@ -435,10 +435,37 @@
       "measured": "about 0.1 g",
       "creatinine_flagged": "unknown",
       "result": "Fail",
-      "nsf_certified_for_sport_gummy_listings": 0,
+      "nsf_certified_for_sport_gummy_listings": "0",
       "nsf_checked_on": "2026-09-15",
       "source_url": "https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/",
       "notes": ""
+    }
+  ],
+  "primary_label_checks": [
+    {
+      "product": "Create Creatine Gummies (Watermelon, 90-count tub)",
+      "checked_on": "2026-09-15",
+      "method": "Retail purchase; Supplement Facts panel photographed by GummyGains",
+      "serving_size": "3 gummies",
+      "servings_per_container": 30,
+      "creatine_monohydrate_g": 4.5,
+      "calories": 60,
+      "total_carbohydrate_g": 8,
+      "total_sugars_g": 5,
+      "added_sugars_g": 2,
+      "other_ingredients": [
+        "Tapioca Syrup",
+        "Sugar",
+        "Allulose",
+        "Reverse Osmosis Water",
+        "Pectin",
+        "Natural Watermelon Flavor",
+        "Natural Color",
+        "Citric Acid"
+      ],
+      "net_weight_g": 454,
+      "gummies_per_container": 90,
+      "photo": "https://getgummygains.com/assets/product/create-watermelon-supplement-facts.jpg"
     }
   ]
 }
