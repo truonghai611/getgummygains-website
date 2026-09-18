@@ -150,7 +150,7 @@
 
       quizResult.innerHTML =
         '<h3>' + title + '</h3><p>' + body + '</p>' +
-        '<a class="btn btn-full" href="https://trycreate.co/15-9KD?q=' + code + '" rel="sponsored nofollow noopener" target="_blank">Check current Create price &rarr;</a>' +
+        '<a class="btn btn-full" data-link-id="' + code + '" data-cta-position="quiz_result" href="https://trycreate.co/15-9KD" rel="sponsored nofollow noopener" target="_blank">Check current Create price &rarr;</a>' +
         '<p class="btn-note" style="color:#98A2B8">We may earn a commission &middot; <a href="' + secHref + '" style="color:#D7DDEA;text-decoration:underline">' + secText + '</a></p>';
       quizResult.classList.add('show');
       quizResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -165,8 +165,10 @@
     var params = new URLSearchParams(location.search);
     var referrerHost = '';
     try { referrerHost = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
-    var isChatGPT = params.get('utm_source') === 'chatgpt.com' || /(^|\.)chatgpt\.com$/.test(referrerHost);
-    var trafficSource = isChatGPT ? 'chatgpt' : (params.get('utm_source') || referrerHost || 'direct');
+    var internalReferrer = /(^|\.)getgummygains\.com$/.test(referrerHost);
+    var incomingSource = (params.get('utm_source') || '').toLowerCase();
+    var isChatGPT = /^(chatgpt|chatgpt\.com)$/.test(incomingSource) || /(^|\.)chatgpt\.com$/.test(referrerHost);
+    var trafficSource = isChatGPT ? 'chatgpt' : (incomingSource || (!internalReferrer && referrerHost) || 'direct');
     var sourceContext = {
       traffic_source: trafficSource,
       is_chatgpt_referral: isChatGPT ? 'yes' : 'no',
@@ -174,17 +176,19 @@
       utm_medium: params.get('utm_medium') || '',
       utm_campaign: params.get('utm_campaign') || '',
       utm_content: params.get('utm_content') || '',
-      landing_page: sessionStorage.getItem('gg_landing_page') || location.pathname
+      landing_page: location.pathname
     };
-    if (!sessionStorage.getItem('gg_landing_page')) {
-      sessionStorage.setItem('gg_landing_page', location.pathname);
-      sourceContext.landing_page = location.pathname;
-    }
-    if (!sessionStorage.getItem('gg_traffic_source')) {
-      sessionStorage.setItem('gg_traffic_source', trafficSource);
-    } else if (trafficSource === 'direct') {
-      sourceContext.traffic_source = sessionStorage.getItem('gg_traffic_source');
-    }
+    // Keep the original context across internal navigation, with a 30-minute inactivity limit.
+    // Storage may be blocked; click tracking must still work in that case.
+    try {
+      var saved = JSON.parse(sessionStorage.getItem('gg_attribution_v2') || 'null');
+      var now = Date.now();
+      if (!incomingSource && (internalReferrer || !referrerHost) && saved &&
+          saved.context && now - saved.updatedAt < 30 * 60 * 1000) {
+        sourceContext = saved.context;
+      }
+      sessionStorage.setItem('gg_attribution_v2', JSON.stringify({ context: sourceContext, updatedAt: now }));
+    } catch (e) {}
 
     var moneyPages = ['/best-creatine-gummies-2026', '/create-creatine-gummies-review', '/creatine-gummies-lab-tested', '/best-creatine-gummies-for-women', '/creatine-gummies-vs-powder', '/creatine-dose-calculator'];
     if (moneyPages.indexOf(location.pathname.replace(/\/$/, '')) !== -1) {
@@ -217,23 +221,31 @@
     window.addEventListener('scroll', onScrollDepth, { passive: true });
     onScrollDepth();
 
-    document.querySelectorAll('a[href*="trycreate.co"],a[href*="bulksupplements.com"]').forEach(function (a) {
-      a.addEventListener('click', function () {
-        var position = 'inline';
-        if (a.closest('.sticky')) { position = 'sticky'; }
-        else if (a.closest('.pick')) { position = 'product_card'; }
-        else if (a.closest('.quiz-result')) { position = 'quiz_result'; }
-        else if (a.closest('.value-eq') || (a.previousElementSibling && a.previousElementSibling.classList && a.previousElementSibling.classList.contains('value-eq'))) { position = 'value_equation'; }
-        var explicitPosition = a.getAttribute('data-cta-position');
-        if (explicitPosition) { position = explicitPosition; }
-        gtag('event', 'affiliate_outbound_click', Object.assign({
-          page_path: location.pathname,
-          link_id: a.getAttribute('data-link-id') || '',
-          link_url: a.href,
-          cta_position: position,
-          link_text: (a.textContent || '').trim().slice(0, 60)
-        }, sourceContext));
-      });
+    // Delegation also covers links created after the quiz is completed.
+    document.addEventListener('click', function (event) {
+      var target = event.target;
+      var a = target && target.closest ? target.closest('a[href]') : null;
+      if (!a) { return; }
+      var destination;
+      try { destination = new URL(a.href, location.href); } catch (e) { return; }
+      var createAffiliate = /^(www\.)?trycreate\.co$/.test(destination.hostname) && destination.pathname === '/15-9KD';
+      var bulkAffiliate = /(^|\.)bulksupplements\.com$/.test(destination.hostname) &&
+        /(^|\s)sponsored(\s|$)/.test(a.getAttribute('rel') || '');
+      if (!createAffiliate && !bulkAffiliate) { return; }
+      var position = 'inline';
+      if (a.closest('.sticky')) { position = 'sticky'; }
+      else if (a.closest('.pick')) { position = 'product_card'; }
+      else if (a.closest('.quiz-result')) { position = 'quiz_result'; }
+      else if (a.closest('.value-eq') || (a.previousElementSibling && a.previousElementSibling.classList && a.previousElementSibling.classList.contains('value-eq'))) { position = 'value_equation'; }
+      position = a.getAttribute('data-cta-position') || position;
+      gtag('event', 'affiliate_outbound_click', Object.assign({
+        page_path: location.pathname,
+        link_id: a.getAttribute('data-link-id') || location.pathname + ':' + position,
+        link_url: destination.origin + destination.pathname,
+        cta_position: position,
+        link_text: (a.textContent || '').trim().slice(0, 60),
+        transport_type: 'beacon'
+      }, sourceContext));
     });
   }
 })();
