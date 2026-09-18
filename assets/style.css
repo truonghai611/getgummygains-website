@@ -1,5 +1,6 @@
 /* GummyGains design system — mobile-first, no external fonts, CLS-safe */
 :root{
+color-scheme:light;
 --ink:#0B1020; --ink-2:#1C2333; --muted:#5A6478; --line:#E4E8F0;
 --bg:#FFFFFF; --bg-2:#F6F8FC; --bg-3:#EEF2F9;
 --cta:#FF4A22; --cta-dark:#E23A15;
@@ -130,7 +131,7 @@ border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0 0 16px}
 .specs dd small{font-weight:600;font-size:12.5px;color:var(--muted);letter-spacing:0}
 .prosCons{display:grid;gap:14px;margin:0 0 18px}
 @media(min-width:620px){.prosCons{grid-template-columns:1fr 1fr}}
-.pcbox{border-radius:12px;padding:13px 15px;font-size:15px}
+.pcbox{border-radius:12px;padding:13px 15px;font-size:15px;color:var(--ink)}
 .pcbox h4{margin:0 0 7px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .pcbox ul{margin:0;padding-left:1.05em}
 .pcbox li{margin:.25em 0}
@@ -169,7 +170,7 @@ td:first-child,th:first-child{font-weight:700}
 @media(min-width:800px){.scrollhint{display:none}}
 
 /* ---------- callouts ---------- */
-.call{border-radius:var(--r);padding:16px 18px;margin:20px 0;font-size:16px;border-left:4px solid}
+.call{border-radius:var(--r);padding:16px 18px;margin:20px 0;font-size:16px;border-left:4px solid;color:var(--ink)}
 .call p:last-child{margin-bottom:0}
 .call strong{font-weight:800}
 .call-warn{background:var(--warn-bg);border-color:var(--warn)}
