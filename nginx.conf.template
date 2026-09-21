@@ -24,22 +24,22 @@ server {
     # also fire on that internal rewrite - causing every request for "/" to
     # 301-redirect to itself in an infinite loop. $request_uri is unaffected
     # by internal rewrites, so these checks only match real client requests.
-    if ($request_uri = "/index.html") {
-        return 301 /;
+    if ($request_uri ~ "^/index[.]html(?:[?]|$)") {
+        return 301 /$is_args$args;
     }
-    if ($request_uri ~ "^/(.+)\.html$") {
-        return 301 /$1;
+    if ($request_uri ~ "^/([^?]+)[.]html(?:[?].*)?$") {
+        return 301 /$1$is_args$args;
     }
 
 
     # Consolidated pages (Sept 2026) - merged into stronger pages, 301 permanently.
-    location = /create-creatine-monohydrate-gummies-review { return 301 /create-creatine-gummies-review; }
-    location = /create-creatine-for-women { return 301 /create-creatine-gummies-review; }
-    location = /create-lemonade-collection-review { return 301 /create-creatine-gummies-review; }
-    location = /best-creatine-electrolyte-mix { return 301 /creatine-with-electrolytes; }
-    location = /creatine-electrolytes-vs-separate { return 301 /creatine-with-electrolytes; }
-    location = /creatine-stick-packs-review { return 301 /creatine-gummies-vs-stick-packs; }
-    location = /best-creatine-gummies-for-men { return 301 /best-creatine-gummies-2026; }
+    location = /create-creatine-monohydrate-gummies-review { return 301 /create-creatine-gummies-review$is_args$args; }
+    location = /create-creatine-for-women { return 301 /create-creatine-gummies-review$is_args$args; }
+    location = /create-lemonade-collection-review { return 301 /create-creatine-gummies-review$is_args$args; }
+    location = /best-creatine-electrolyte-mix { return 301 /creatine-with-electrolytes$is_args$args; }
+    location = /creatine-electrolytes-vs-separate { return 301 /creatine-with-electrolytes$is_args$args; }
+    location = /creatine-stick-packs-review { return 301 /creatine-gummies-vs-stick-packs$is_args$args; }
+    location = /best-creatine-gummies-for-men { return 301 /best-creatine-gummies-2026$is_args$args; }
 
     location / {
         try_files $uri $uri.html $uri/ =404;
