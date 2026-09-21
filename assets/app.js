@@ -130,28 +130,28 @@
       var hasElectrolyte = quizAnswers['4'] === 'yes';
       var title, body, code, secHref, secText;
 
-      if (onTheGo && !hasElectrolyte) {
-        title = 'A combined creatine + electrolyte format fits your routine';
-        body = 'You take creatine on the move and do not already use a separate electrolyte product. A combo gummy or stick pack removes one thing to pack and one thing to forget — that is worth more to your results than any brand difference.';
-        code = 'quiz-travel-electrolyte'; secHref = '/creatine-for-travel'; secText = 'See the on-the-go format guide';
-      } else if (onTheGo || skipsOften) {
-        title = 'Your real risk is missed doses, not the wrong brand';
-        body = 'Whatever you pick, the format you will actually take every single day beats the format that is cheapest on paper. A lab-verified gummy you keep chewing beats a tub of powder gathering dust in the cabinet.';
-        code = 'quiz-adherence'; secHref = '/30-days-no-missed-creatine-dose'; secText = 'How to build a 30-day streak without missing a dose';
-      } else if (wantsSugarFree) {
-        title = 'Check the sugar panel before the flavor';
-        body = 'You rarely skip a dose and want to avoid added sugar — you already have the discipline for plain powder. If you still prefer the gummy format, read the exact sugar grams on the panel rather than trusting a "sugar-free" claim on the front.';
-        code = 'quiz-sugarfree'; secHref = '/sugar-free-creatine-gummies'; secText = 'What "sugar-free" really means on the label';
+      if (wantsSugarFree) {
+        title = 'Start with your no-added-sugar preference';
+        body = 'Check added sugar on the exact label first. Plain powder is an option; if you prefer gummies, compare their ingredients before choosing a brand. Travel and missed doses do not override your sugar preference.';
+        code = 'quiz-sugarfree'; secHref = '/sugar-free-creatine-gummies'; secText = 'Compare options for avoiding sugar';
+      } else if (onTheGo) {
+        title = 'Compare formats that are easy to carry';
+        body = hasElectrolyte ? 'You already use an electrolyte product. Compare a separate creatine format before adding another combination product.' : 'Compare gummies and single-serve powder for portability. Being on the go does not by itself mean you need added electrolytes.';
+        code = 'quiz-travel'; secHref = '/creatine-for-travel'; secText = 'Compare travel-friendly formats';
+      } else if (skipsOften) {
+        title = 'Build a routine you can maintain';
+        body = 'A reminder and a convenient format may help. Compare the cost and ingredients of gummies with a powder routine before choosing.';
+        code = 'quiz-adherence'; secHref = '/30-days-no-missed-creatine-dose'; secText = 'Build a practical daily routine';
       } else {
-        title = 'Honestly, plain powder is the more efficient pick for you';
-        body = 'You take it at home and rarely skip a dose — that is exactly the profile that does fine on plain creatine monohydrate powder at a fraction of the price. If you still want the gummy format for taste, choose one with independent lab verification.';
-        code = 'quiz-verified-pick'; secHref = '/creatine-gummies-vs-powder'; secText = 'See the honest gummies-vs-powder math';
+        title = 'Compare plain powder before paying for gummies';
+        body = 'You take creatine at home and rarely miss it. Compare the price per gram and labeled serving of powder with gummies; convenience may not justify a higher price for your routine.';
+        code = 'quiz-verified-pick'; secHref = '/creatine-gummies-vs-powder'; secText = 'Compare powder and gummies';
       }
 
       quizResult.innerHTML =
         '<h3>' + title + '</h3><p>' + body + '</p>' +
-        '<a class="btn btn-full" data-link-id="' + code + '" data-cta-position="quiz_result" href="https://trycreate.co/15-9KD" rel="sponsored nofollow noopener" target="_blank">Check current Create price &rarr;</a>' +
-        '<p class="btn-note" style="color:#98A2B8">We may earn a commission &middot; <a href="' + secHref + '" style="color:#D7DDEA;text-decoration:underline">' + secText + '</a></p>';
+        '<a class="btn btn-full" data-link-id="' + code + '" data-cta-position="quiz_result" href="' + secHref + '">' + secText + ' &rarr;</a>' +
+        '<p class="btn-note" style="color:#98A2B8">Format guidance, not a medical assessment. Read the exact product label before buying.</p>';
       quizResult.classList.add('show');
       quizResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
       if (typeof gtag === 'function') {
