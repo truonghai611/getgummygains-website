@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-09-24",
+  "scope": "Selected Blue Raspberry tub and pouch options; storefront displayed dollar amounts, some rounded; not checkout totals or an exhaustive catalog audit",
+  "source_urls": [
+    "https://trycreate.co/products/creatine-monohydrate-gummies?variant=54066904826228",
+    "https://trycreate.co/products/creatine-monohydrate-gummies?variant=54066907578740"
+  ],
+  "creatine_g_per_gummy": 1.5,
+  "labeled_serving_gummies": 3,
+  "options": [
+    {
+      "format": "tub",
+      "months": 1,
+      "servings": 30,
+      "one_time_display": 60,
+      "subscription_display": 48,
+      "rounded": false
+    },
+    {
+      "format": "tub",
+      "months": 3,
+      "servings": 90,
+      "one_time_display": 167,
+      "subscription_display": 133,
+      "rounded": true
+    },
+    {
+      "format": "pouch",
+      "months": 1,
+      "servings": 30,
+      "one_time_display": 73,
+      "subscription_display": 58,
+      "rounded": true
+    },
+    {
+      "format": "pouch",
+      "months": 3,
+      "servings": 90,
+      "one_time_display": 201,
+      "subscription_display": 161,
+      "rounded": true
+    }
+  ],
+  "extra_affiliate_stacking": "unverified"
+}

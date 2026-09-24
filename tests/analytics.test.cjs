@@ -29,3 +29,9 @@ test('new external source replaces previous attribution',()=>{const store=new Ma
 test('stale context expires after inactivity',()=>{const store=new Map([['gg_attribution_v2',JSON.stringify({updatedAt:Date.now()-31*60*1000,context:{traffic_source:'chatgpt'}})]]);const b=load({store});b.click();assert.equal(b.outbound()[0][2].traffic_source,'direct');});
 test('explicit campaign overrides prior internal context',()=>{const store=new Map();load({referrer:'https://chatgpt.com/',store});const b=load({referrer:'https://getgummygains.com/',search:'?utm_source=youtube&utm_campaign=test',store});b.click();assert.equal(b.outbound()[0][2].traffic_source,'youtube');});
 test('outbound event does not copy URL query parameters',()=>{const b=load();b.click('https://trycreate.co/15-9KD?q=quiz');assert.equal(b.outbound()[0][2].link_url,'https://trycreate.co/15-9KD');});
+test('Instagram bio source persists from Maya to affiliate page',()=>{
+ const store=new Map();load({path:'/maya',search:'?utm_source=ig&utm_medium=social&utm_campaign=maya_labels&utm_content=link_in_bio',store});
+ const b=load({path:'/create-creatine-gummies-review',referrer:'https://getgummygains.com/maya',store});b.click();const e=b.outbound()[0][2];assert.equal(e.traffic_source,'instagram');assert.equal(e.utm_campaign,'maya_labels');assert.equal(e.landing_page,'/maya');
+});
+test('Maya topic click is separate from merchant outbound',()=>{const b=load({path:'/maya',search:'?utm_source=youtube'});b.ctx.location.origin='https://getgummygains.com';b.click('https://getgummygains.com/creatine-dose-calculator',{'data-hub-topic':'dose-math'});assert.equal(b.outbound().length,0);const e=b.events().find(x=>x[1]==='social_hub_click');assert.equal(e[2].hub_topic,'dose-math');assert.equal(e[2].traffic_source,'youtube');});
+test('legacy ChatGPT referrer is recognized',()=>{const b=load({referrer:'https://chat.openai.com/'});b.click();assert.equal(b.outbound()[0][2].traffic_source,'chatgpt');});
