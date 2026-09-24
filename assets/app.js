@@ -49,39 +49,23 @@
     };
 
     var run = function () {
-      var price = parseFloat($('c-price').value) || 0;
-      var count = parseFloat($('c-count').value) || 0;
-      var per = parseFloat($('c-per').value) || 0;
-      var target = parseFloat($('c-target').value) || 5;
-      var out = $('c-out'), gum = $('c-gummies'), days = $('c-days'), verdict = $('c-verdict');
-      if (!price || !count || !per || !target) { out.textContent = '—'; return; }
-
-      var totalG = count * per;                 // total grams of creatine in the tub
-      var doses = totalG / target;              // how many real doses it contains
-      var costPerDose = price / doses;
-      var gPerDose = Math.ceil(target / per);   // gummies you must chew per dose
-      var daysLeft = Math.floor(count / gPerDose);
-
-      out.textContent = fmt(costPerDose);
-      gum.textContent = gPerDose + ' gummies';
-      days.textContent = daysLeft + ' days';
-
-      var msg, cls;
-      if (costPerDose <= 1.20) {
-        msg = '<b>Fair for the format.</b> That is in the normal band for an honestly dosed gummy — roughly 3–4x powder, which is the convenience premium.';
-        cls = 'pass';
-      } else if (costPerDose <= 2.00) {
-        msg = '<b>Premium.</b> You are paying a real markup over powder. Worth it only if the gummy is the reason you actually take it daily.';
-        cls = 'warn';
-      } else {
-        msg = '<b>Expensive.</b> Over $2 per 5&nbsp;g dose is roughly 6–10x the cost of powder. Check whether the label is quoting creatine per gummy instead of per serving.';
-        cls = 'fail';
+      var result = window.gummyLabelCost(
+        Number($('c-price').value), Number($('c-count').value),
+        Number($('c-per').value), Number($('c-target').value));
+      var out = $('c-out'), grams = $('c-gummies'), servings = $('c-days');
+      var normalized = $('c-normalized'), verdict = $('c-verdict');
+      if (!result) {
+        out.textContent = grams.textContent = servings.textContent = normalized.textContent = '—';
+        verdict.textContent = 'Enter positive values. Unit counts must be whole numbers, with at least one complete labeled serving in the container.';
+        verdict.setAttribute('data-level', 'warn'); return;
       }
-      if (gPerDose >= 6) {
-        msg += ' Also note: <b>' + gPerDose + ' gummies a day</b> is a lot of chewing — this is the number people quietly stop hitting after week two.';
-      }
-      verdict.innerHTML = msg;
-      verdict.setAttribute('data-level', cls);
+      out.textContent = fmt(result.servingCost);
+      grams.textContent = Number(result.servingGrams.toFixed(3)) + ' g';
+      servings.textContent = result.completeServings;
+      normalized.textContent = fmt(result.normalizedCost);
+      verdict.textContent = 'Based on the label, not a laboratory measurement. The 5 g equivalent is for comparing prices and does not tell you how much to take.' +
+        (result.leftoverUnits ? ' After complete servings, ' + result.leftoverUnits + ' unit(s) remain.' : '');
+      verdict.setAttribute('data-level', 'pass');
     };
 
     fields.forEach(function (id) {
@@ -92,7 +76,7 @@
     document.querySelectorAll('[data-preset]').forEach(function (b) {
       b.addEventListener('click', function () {
         var p = b.getAttribute('data-preset').split(',');
-        $('c-price').value = p[0]; $('c-count').value = p[1]; $('c-per').value = p[2];
+        $('c-price').value = p[0]; $('c-count').value = p[1]; $('c-per').value = p[2]; $('c-target').value = p[3];
         run();
       });
     });
@@ -167,7 +151,9 @@
     try { referrerHost = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
     var internalReferrer = /(^|\.)getgummygains\.com$/.test(referrerHost);
     var incomingSource = (params.get('utm_source') || '').toLowerCase();
-    var isChatGPT = /^(chatgpt|chatgpt\.com)$/.test(incomingSource) || /(^|\.)chatgpt\.com$/.test(referrerHost);
+    var sourceAliases = {ig: 'instagram', yt: 'youtube', tt: 'tiktok'};
+    incomingSource = sourceAliases[incomingSource] || incomingSource;
+    var isChatGPT = /^(chatgpt|chatgpt\.com)$/.test(incomingSource) || /(^|\.)(chatgpt\.com|chat\.openai\.com)$/.test(referrerHost);
     var trafficSource = isChatGPT ? 'chatgpt' : (incomingSource || (!internalReferrer && referrerHost) || 'direct');
     var sourceContext = {
       traffic_source: trafficSource,
@@ -190,7 +176,7 @@
       sessionStorage.setItem('gg_attribution_v2', JSON.stringify({ context: sourceContext, updatedAt: now }));
     } catch (e) {}
 
-    var moneyPages = ['/best-creatine-gummies-2026', '/create-creatine-gummies-review', '/creatine-gummies-lab-tested', '/best-creatine-gummies-for-women', '/creatine-gummies-vs-powder', '/creatine-dose-calculator'];
+    var moneyPages = ['/best-creatine-gummies-2026', '/create-creatine-gummies-review', '/creatine-gummies-lab-tested', '/best-creatine-gummies-for-women', '/creatine-gummies-vs-powder', '/creatine-dose-calculator', '/nsf-certified-creatine-gummies', '/cheapest-way-to-buy-create-creatine', '/maya'];
     if (moneyPages.indexOf(location.pathname.replace(/\/$/, '')) !== -1) {
       gtag('event', 'view_money_page', Object.assign({
         page_path: location.pathname,
@@ -228,6 +214,11 @@
       if (!a) { return; }
       var destination;
       try { destination = new URL(a.href, location.href); } catch (e) { return; }
+      var hubTopic = a.getAttribute('data-hub-topic');
+      if (hubTopic && destination.origin === location.origin) {
+        gtag('event', 'social_hub_click', Object.assign({ hub_topic: hubTopic,
+          page_path: location.pathname, destination_path: destination.pathname }, sourceContext));
+      }
       var createAffiliate = /^(www\.)?trycreate\.co$/.test(destination.hostname) && destination.pathname === '/15-9KD';
       var bulkAffiliate = /(^|\.)bulksupplements\.com$/.test(destination.hostname) &&
         /(^|\s)sponsored(\s|$)/.test(a.getAttribute('rel') || '');
