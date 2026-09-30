@@ -1,0 +1,175 @@
+{
+  "date": "2026-09-30",
+  "market": "US",
+  "note": "Candidate clusters; not exhaustive competitor rankings or measured Google volume. GSC observations through Sep 26.",
+  "clusters": [
+    {
+      "priority": "P0",
+      "primary_slug": "create-creatine-gummies-review",
+      "intent": "Create review",
+      "keywords": "create creatine gummies review; create gummies review; create creatine monohydrate gummies reviews; is create creatine legit; is create a good creatine brand",
+      "evidence": "GSC: 3 / 2 impressions cho hai truy vấn review đầu; biến thể khác là đề xuất"
+    },
+    {
+      "priority": "P0",
+      "primary_slug": "cheapest-way-to-buy-create-creatine",
+      "intent": "Giá và bao bì",
+      "keywords": "create creatine gummies price; create gummies cost; create gummies tub vs pouch; create creatine subscription; create gummies cost per serving",
+      "evidence": "Thuật ngữ sản phẩm + đề xuất; chưa có volume"
+    },
+    {
+      "priority": "P0",
+      "primary_slug": "best-creatine-gummies-2026",
+      "intent": "So sánh mua hàng",
+      "keywords": "best creatine gummies; best creatine gummies 2026; what are the best creatine gummies; creatine gummies comparison; best tested creatine gummies",
+      "evidence": "GSC: best creatine gummies 26; what are the best creatine gummies 3"
+    },
+    {
+      "priority": "P0",
+      "primary_slug": "creatine-gummies-lab-tested",
+      "intent": "Kiểm nghiệm",
+      "keywords": "creatine gummies third party tested; creatine gummies lab tested; create creatine gummies third party tested; creatine gummies testing; creatine gummies tested",
+      "evidence": "GSC: truy vấn Create third party tested 2; testing 1; tested 1"
+    },
+    {
+      "priority": "P0",
+      "primary_slug": "nsf-certified-creatine-gummies",
+      "intent": "Chứng nhận",
+      "keywords": "nsf certified creatine gummies; create gummies nsf; creatine gummies certified for sport; nsf creatine gummies list; how to check nsf certification",
+      "evidence": "Nguồn danh mục/chứng nhận + đề xuất; không khẳng định số lượng listing toàn thị trường"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "best-creatine-gummies-for-women",
+      "intent": "Nữ giới",
+      "keywords": "creatine gummies for women; best creatine gummies for women; creatine gummy for women; create creatine gummies for women; creatine gummies women review",
+      "evidence": "GSC: 33 / 2 / 4 cho ba truy vấn đầu"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "best-creatine-gummies-for-muscle-growth",
+      "intent": "Tăng cơ",
+      "keywords": "creatine gummies for muscle growth; best creatine gummies for muscle growth; creatine gummies for strength; creatine gummies muscle gain; creatine gummy label dose",
+      "evidence": "GSC: 33 / 13 cho hai truy vấn đầu; không suy diễn lợi ích riêng của gummy"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "best-tasting-creatine-gummies",
+      "intent": "Hương vị",
+      "keywords": "best tasting creatine gummies; best create creatine flavor; create sour grape gummies; create sour cherry gummies; create watermelon gummies; create orange gummies; create blue raspberry gummies; create sour green apple gummies; create sour peach gummies; create gummy variety pack",
+      "evidence": "Tên catalog đã thấy; các câu tìm kiếm là đề xuất, không phải lượng tìm kiếm đã đo"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "creatine-with-electrolytes",
+      "intent": "Mix điện giải",
+      "keywords": "creatine with electrolytes; can you mix electrolytes and creatine; can you mix creatine with electrolytes; create creatine electrolytes mix; creatine electrolytes taurine; create lemonade creatine; create lemon lime creatine",
+      "evidence": "GSC: can you mix electrolytes and creatine 3; can you mix creatine with electrolytes 2"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "creatine-gummies-vs-stick-packs",
+      "intent": "Gói bột",
+      "keywords": "creatine gummies vs stick packs; create creatine stick packs; unflavored creatine stick packs; creatine powder single serve; create gummies vs powder sticks",
+      "evidence": "Tên sản phẩm + đề xuất; chưa có volume"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "creatine-gummies-vs-powder",
+      "intent": "Gummy so với bột",
+      "keywords": "creatine gummies vs powder; do creatine gummies work the same as powder; creatine powder vs gummies cost; gummy creatine vs powder; are creatine gummies better than powder",
+      "evidence": "GSC: work the same as powder 1; các biến thể còn lại đề xuất"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "vegan-creatine-gummies",
+      "intent": "Thuần chay",
+      "keywords": "vegan creatine gummies; best vegan creatine gummies; buy vegan creatine gummies; create gummies vegan; pectin creatine gummies",
+      "evidence": "GSC: 10 / 8 / 6 cho ba truy vấn đầu"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "is-creatine-gluten-free",
+      "intent": "Gluten",
+      "keywords": "does creatine have gluten; does creatine contain gluten; is creatine gluten free; gluten free creatine; creatine gluten ingredients",
+      "evidence": "GSC: 11 / 9; gluten free creatine 4; cần phân biệt hoạt chất và sản phẩm"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "sugar-free-creatine-gummies",
+      "intent": "Đường",
+      "keywords": "sugar free creatine gummies; are create gummies sugar free; create gummies sugar content; creatine gummies sweeteners; creatine gummies allulose",
+      "evidence": "Đề xuất dựa trên nhãn; không gọi Create gummies là sugar-free"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "do-creatine-gummies-expire",
+      "intent": "Hạn sử dụng",
+      "keywords": "does creatine expire; creatine monohydrate shelf life; does creatine go bad; creatine expiration; creatine gummies expiration; how to store creatine gummies",
+      "evidence": "GSC: 7 / 7 / 5 / 6 cho bốn truy vấn đầu; giữ phân biệt bột và gummy"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "best-time-to-take-creatine-gummies",
+      "intent": "Thời điểm",
+      "keywords": "when to take creatine gummies; when should you take creatine gummies; when should i take creatine gummies; when to take create creatine gummies; creatine gummies before or after workout",
+      "evidence": "GSC: 7 / 5 / 3 / 1 cho bốn truy vấn đầu"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "creatine-gummies-dosage",
+      "intent": "Đọc serving",
+      "keywords": "how many creatine gummies per day; how to take creatine gummies; create gummies serving size; how much creatine in create gummies; create 3 gummies 4.5g",
+      "evidence": "GSC: 2 / 3 cho hai truy vấn đầu; không kê liều cá nhân"
+    },
+    {
+      "priority": "P1",
+      "primary_slug": "do-creatine-gummies-work",
+      "intent": "Hiệu quả",
+      "keywords": "are creatine gummies effective; do creatine gummies work; creatine gummies study; creatine gummies evidence; gummy creatine absorption",
+      "evidence": "GSC: effective 2; study 2; cần nghiên cứu gốc để viết thêm"
+    },
+    {
+      "priority": "P2",
+      "primary_slug": "creatine-for-travel",
+      "intent": "Di chuyển",
+      "keywords": "creatine gummies for travel; creatine sachets; travel creatine packs; creatine gummies on plane; single serve creatine travel",
+      "evidence": "GSC: for travel 1; không bảo đảm quy định hải quan/hàng không"
+    },
+    {
+      "priority": "P2",
+      "primary_slug": "do-creatine-gummy-bundles-save-money",
+      "intent": "Bundle",
+      "keywords": "create creatine bundle; create high five bundle; create starter bundle; create ultimate sour bundle; create variety bundle savings",
+      "evidence": "Tên catalog + đề xuất; gom một trang, không mở một bài mỗi bundle"
+    },
+    {
+      "priority": "P2",
+      "primary_slug": "create-creatine-discount-code",
+      "intent": "Mã ưu đãi",
+      "keywords": "create creatine discount code; create gummies promo code; create subscription discount; create creatine first order offer; create coupon stacking",
+      "evidence": "Đề xuất; xác minh giỏ hàng trước khi khẳng định mã/stacking"
+    },
+    {
+      "priority": "P2",
+      "primary_slug": "legion-creatine-gummies-review",
+      "intent": "Đối thủ",
+      "keywords": "legion creatine gummies review; legion gummy creatine review; legion vs create gummies; legion creatine gummies ingredients; legion creatine gummy testing",
+      "evidence": "GSC: truy vấn đầu 12; cần nguồn sản phẩm hiện hành trước khi mở rộng"
+    },
+    {
+      "priority": "P2",
+      "primary_slug": "swoly-creatine-gummies-review",
+      "intent": "Đối thủ",
+      "keywords": "swoly creatine gummies; swoly creatine gummies review; swoly vs create; swoly gummy ingredients; swoly creatine testing",
+      "evidence": "GSC: truy vấn đầu 6; còn lại đề xuất"
+    },
+    {
+      "priority": "P2",
+      "primary_slug": "creatine-gummies-side-effects",
+      "intent": "An toàn",
+      "keywords": "creatine gummies side effects; are creatine gummies safe; create gummies side effects; gummy creatine bloating; creatine gummies stomach upset",
+      "evidence": "GSC: 4 / 2 / 1; cần chuyên gia và nguồn y khoa gốc, không dùng marketing để trả lời"
+    }
+  ]
+}

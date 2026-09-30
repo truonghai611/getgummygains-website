@@ -4,6 +4,8 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from urllib.parse import urlsplit, unquote
 import collections, json, re, unicodedata, xml.etree.ElementTree as ET
+from datetime import date
+CHECKED = date.today().isoformat()
 ROOT = Path(__file__).resolve().parents[1]
 files = sorted(ROOT.glob('*.html'))
 pages = {('/' if f.stem == 'index' else '/' + f.stem): BeautifulSoup(f.read_text(), 'html.parser') for f in files}
@@ -56,7 +58,7 @@ for f in (ROOT/'assets/product').glob('*'):
     if f.is_file():
         hits=[x.decode() for x in [b'C2PA',b'c2pa',b'SynthID',b'OpenAI',b'DALL',b'CreatorTool'] if x in f.read_bytes()]
         image_markers[str(f.relative_to(ROOT))]=hits
-report={'checked':'2026-09-24','scope':'Static HTML, internal links/fragments/assets, canonical/sitemap, JSON syntax, named literal and Unicode-format marker scan. No classifier; no exhaustive image provenance, medical-claim, ranking or penalty verification.', 'pages':len(rows), 'sitemap_urls':len(sitemap), 'errors':errors, 'image_literal_scan':image_markers, 'rows':rows}
-(ROOT/'docs/site-audit-2026-09-24.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+report={'checked':CHECKED,'scope':'Static HTML, internal links/fragments/assets, canonical/sitemap, JSON syntax, named literal and Unicode-format marker scan. No classifier; no exhaustive image provenance, medical-claim, ranking or penalty verification.', 'pages':len(rows), 'sitemap_urls':len(sitemap), 'errors':errors, 'image_literal_scan':image_markers, 'rows':rows}
+(ROOT/f'docs/site-audit-{CHECKED}.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'pages':len(rows),'sitemap_urls':len(sitemap),'errors':errors,'format_character_pages':sum(bool(x['format_characters']) for x in rows),'marker_match_pages':sum(bool(x['provenance_marker_matches']) for x in rows),'product_images':len(image_markers)},indent=2))
 raise SystemExit(bool(errors))
