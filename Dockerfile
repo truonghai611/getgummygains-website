@@ -1,12 +1,11 @@
-# Static site (GummyGains) served via nginx — Railway auto-detects this Dockerfile.
+# Static GummyGains site: only public assets belong in the document root.
 FROM nginx:alpine
 
-COPY . /usr/share/nginx/html
+COPY *.html *.png *.jpg *.ico robots.txt sitemap.xml cb5ed56a846d444089d11c93e366f389.txt style.css /usr/share/nginx/html/
+COPY assets/ /usr/share/nginx/html/assets/
+COPY data/ /usr/share/nginx/html/data/
 COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 
-# Railway injects PORT at runtime; nginx's official entrypoint scripts run
-# envsubst on templates/*.template -> conf.d/*.conf automatically at container start.
 ENV PORT=8080
 EXPOSE 8080
-
 CMD ["nginx", "-g", "daemon off;"]

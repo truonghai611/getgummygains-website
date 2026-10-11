@@ -153,10 +153,39 @@
     var incomingSource = (params.get('utm_source') || '').toLowerCase();
     var sourceAliases = {ig: 'instagram', yt: 'youtube', tt: 'tiktok'};
     incomingSource = sourceAliases[incomingSource] || incomingSource;
-    var isChatGPT = /^(chatgpt|chatgpt\.com)$/.test(incomingSource) || /(^|\.)(chatgpt\.com|chat\.openai\.com)$/.test(referrerHost);
+    var aiSources = {
+      chatgpt: 'chatgpt', 'chatgpt.com': 'chatgpt', 'chat.openai.com': 'chatgpt',
+      perplexity: 'perplexity', 'perplexity.ai': 'perplexity',
+      claude: 'claude', 'claude.ai': 'claude',
+      copilot: 'copilot', 'copilot.microsoft.com': 'copilot', 'copilot.com': 'copilot',
+      gemini: 'gemini', 'gemini.google.com': 'gemini',
+      deepseek: 'deepseek', 'chat.deepseek.com': 'deepseek',
+      grok: 'grok', 'grok.com': 'grok'
+    };
+    var aiHostRules = [
+      ['chatgpt', /(^|\.)(chatgpt\.com|chat\.openai\.com)$/],
+      ['perplexity', /(^|\.)perplexity\.ai$/],
+      ['claude', /(^|\.)claude\.ai$/],
+      ['copilot', /(^|\.)(copilot\.microsoft\.com|copilot\.com)$/],
+      ['gemini', /(^|\.)gemini\.google\.com$/],
+      ['deepseek', /(^|\.)chat\.deepseek\.com$/],
+      ['grok', /(^|\.)grok\.com$/]
+    ];
+    var aiPlatform = Object.prototype.hasOwnProperty.call(aiSources, incomingSource) ? aiSources[incomingSource] : '';
+    if (!aiPlatform) {
+      aiHostRules.some(function (rule) {
+        if (!rule[1].test(referrerHost)) { return false; }
+        aiPlatform = rule[0]; return true;
+      });
+    }
+    // A referral measures a visit, not an AI mention or a crawler request.
+    // Google/Bing search referrals cannot identify an AI answer reliably.
+    var isChatGPT = aiPlatform === 'chatgpt';
     var trafficSource = isChatGPT ? 'chatgpt' : (incomingSource || (!internalReferrer && referrerHost) || 'direct');
     var sourceContext = {
       traffic_source: trafficSource,
+      ai_platform: aiPlatform || 'none',
+      is_ai_referral: aiPlatform ? 'yes' : 'no',
       is_chatgpt_referral: isChatGPT ? 'yes' : 'no',
       utm_source: params.get('utm_source') || '',
       utm_medium: params.get('utm_medium') || '',
@@ -182,6 +211,13 @@
         page_path: location.pathname,
         page_title: document.title
       }, sourceContext));
+    }
+    if (aiPlatform) {
+      gtag('event', 'ai_referral_landing', Object.assign({}, sourceContext, {
+        page_path: location.pathname,
+        page_title: document.title,
+        ai_platform: aiPlatform
+      }));
     }
     if (isChatGPT) {
       gtag('event', 'chatgpt_referral_landing', Object.assign({
