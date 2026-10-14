@@ -4,6 +4,18 @@ server {
     root /usr/share/nginx/html;
     index index.html;
 
+    # Crawlers were treating titles as Latin-1 and misreading em dashes.
+    # text/html is always included by the charset module; list the rest.
+    charset utf-8;
+    charset_types text/css text/javascript application/javascript application/json application/xml text/xml application/rss+xml image/svg+xml;
+
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 5;
+    gzip_min_length 256;
+    gzip_proxied any;
+    gzip_types text/plain text/css text/javascript application/javascript application/json application/xml text/xml application/rss+xml image/svg+xml;
+
     # Railway terminates TLS and proxies to this container on an internal
     # port (${PORT}), so nginx must not bake that port into redirect
     # Location headers - keep them relative (path-only).
@@ -40,6 +52,22 @@ server {
     location = /creatine-electrolytes-vs-separate { return 301 /creatine-with-electrolytes$is_args$args; }
     location = /creatine-stick-packs-review { return 301 /creatine-gummies-vs-stick-packs$is_args$args; }
     location = /best-creatine-gummies-for-men { return 301 /best-creatine-gummies-2026$is_args$args; }
+
+    # Filenames are not hashed, so avoid year-long immutable caching.
+    location ~* \.(?:css|js|mjs)$ {
+        add_header Cache-Control "public, max-age=604800";
+        try_files $uri =404;
+    }
+
+    location ~* \.(?:png|jpe?g|gif|webp|svg|ico|avif|woff2?)$ {
+        add_header Cache-Control "public, max-age=2592000";
+        try_files $uri =404;
+    }
+
+    location ~* \.(?:json|xml|txt)$ {
+        add_header Cache-Control "public, max-age=3600";
+        try_files $uri =404;
+    }
 
     location / {
         try_files $uri $uri.html $uri/ =404;
