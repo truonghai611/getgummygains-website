@@ -185,3 +185,11 @@ Links on those pages that had no `q` before (checkout buttons, and some source o
 | `vegan-creatine-gummies` | `vegan-creatine-gummies-sticky` |  | `vegan-creatine-gummies-cta-1` |
 | `wild-gainz-creatine-gummies-review` | `wild-gainz-creatine-gummies-review-inline` |  | `wild-gainz-creatine-gummies-review-cta-1` |
 | `wild-gainz-creatine-gummies-review` | `wild-gainz-creatine-gummies-review-sticky` |  | `wild-gainz-creatine-gummies-review-cta-2` |
+
+## Added October 14, 2026
+
+| Page | New `q` | Previous `q` | Previous `data-link-id` |
+| --- | --- | --- | --- |
+| `is-create-legit` | `is-create-legit-source` |  |  |
+| `is-create-legit` | `is-create-legit-inline` |  |  |
+| `is-create-legit` | `is-create-legit-sticky` |  |  |
