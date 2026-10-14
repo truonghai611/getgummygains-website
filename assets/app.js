@@ -102,6 +102,7 @@
           b.classList.remove('sel');
         });
         btn.classList.add('sel');
+        quiz.querySelectorAll('.quiz-opt[data-q="' + q + '"]').forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
         quizAnswers[q] = btn.getAttribute('data-v');
         if (Object.keys(quizAnswers).length >= 4) { renderQuizResult(); }
       });
@@ -226,6 +227,17 @@
       }, sourceContext));
     }
 
+    if ('IntersectionObserver' in window) {
+      var decisionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) { return; }
+          gtag('event', 'decision_module_view', Object.assign({ page_path: location.pathname,
+            decision_module: entry.target.getAttribute('data-ccwc-module') }, sourceContext));
+          decisionObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.25 });
+      document.querySelectorAll('[data-ccwc-module]').forEach(function (module) { decisionObserver.observe(module); });
+    }
     var seenDepth = {};
     var markDepth = function (pct) {
       if (seenDepth[pct]) { return; }
@@ -250,6 +262,12 @@
       if (!a) { return; }
       var destination;
       try { destination = new URL(a.href, location.href); } catch (e) { return; }
+      var buyerIntent = a.getAttribute('data-buyer-intent');
+      if (buyerIntent) {
+        gtag('event', 'buyer_intent_click', Object.assign({ buyer_intent: buyerIntent,
+          page_path: location.pathname, destination_path: destination.pathname,
+          cta_position: a.getAttribute('data-cta-position') || 'decision_route' }, sourceContext));
+      }
       var hubTopic = a.getAttribute('data-hub-topic');
       if (hubTopic && destination.origin === location.origin) {
         gtag('event', 'social_hub_click', Object.assign({ hub_topic: hubTopic,
