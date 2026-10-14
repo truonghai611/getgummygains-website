@@ -287,6 +287,7 @@
         page_path: location.pathname,
         link_id: a.getAttribute('data-link-id') || location.pathname + ':' + position,
         link_url: destination.origin + destination.pathname,
+        q: destination.searchParams.get('q') || '',
         cta_position: position,
         link_text: (a.textContent || '').trim().slice(0, 60),
         transport_type: 'beacon'
