@@ -1,8 +1,8 @@
 # GummyGains
 
-> Independent US research on creatine gummies. Henry Nguyen is the editor. He is not a clinician. The site does not run its own assays. Lab numbers are transcribed from public rounds, with a source URL on every row. Prices and registry checks keep the date they were read.
+> Independent US research on creatine gummies. Henry Nguyen is an independent reviewer. He is not a clinician. The site does not run its own assays. Lab numbers are transcribed from public rounds, with a source URL on every row. Prices and registry checks keep the date they were read.
 
-GummyGains does not publish an author photo, a public email, or first-hand taste or training notes. Those are listed as owner items on the about page. Do not invent them.
+Henry Nguyen is the independent reviewer named on the about page. His photograph is published there, and the public corrections email is truonghai611@gmail.com. The site does not publish first-hand taste or training notes. Do not invent them.
 
 ## Cite the lab dataset
 
@@ -20,7 +20,7 @@ Rounds:
 
 ## Trust
 
-- [About, editorial process, update policy, contact gap](https://getgummygains.com/about)
+- [About, editorial process, update policy, and contact](https://getgummygains.com/about)
 - [Methodology and what this site does not test](https://getgummygains.com/methodology)
 - [Affiliate disclosure](https://getgummygains.com/disclosure)
 - [Is Create legit?](https://getgummygains.com/is-create-legit)
