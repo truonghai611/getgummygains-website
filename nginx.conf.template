@@ -52,6 +52,9 @@ server {
     location = /creatine-electrolytes-vs-separate { return 301 /creatine-with-electrolytes$is_args$args; }
     location = /creatine-stick-packs-review { return 301 /creatine-gummies-vs-stick-packs$is_args$args; }
     location = /best-creatine-gummies-for-men { return 301 /best-creatine-gummies-2026$is_args$args; }
+    # Search queries use this shorter path. The published page is best-creatine-gummies-for-women.
+    location = /creatine-gummies-for-women { return 301 /best-creatine-gummies-for-women$is_args$args; }
+    location = /creatine-gummies-for-women/ { return 301 /best-creatine-gummies-for-women$is_args$args; }
 
     # Filenames are not hashed, so avoid year-long immutable caching.
     location ~* \.(?:css|js|mjs)$ {

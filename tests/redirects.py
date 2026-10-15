@@ -26,11 +26,11 @@ with tempfile.TemporaryDirectory(prefix='gg-redirect-test-') as tmp:
             except urllib.error.URLError:
                 if proc.poll() is not None:raise RuntimeError(proc.stderr.read().decode())
                 time.sleep(.1)
-        cases=[('/',200,None),('/?utm_source=chatgpt.com',200,None),('/index.html',301,'/'),('/index.html?utm_source=chatgpt.com',301,'/?utm_source=chatgpt.com'),('/guide.html',301,'/guide'),('/guide.html?utm_source=chatgpt.com&x=a%2Fb',301,'/guide?utm_source=chatgpt.com&x=a%2Fb'),('/guide?utm_source=chatgpt.com',200,None),('/create-creatine-monohydrate-gummies-review?utm_source=chatgpt.com',301,'/create-creatine-gummies-review?utm_source=chatgpt.com'),('/absent',404,None),('/?next=/guide.html',200,None),('/best-creatine-electrolyte-mix',301,'/creatine-with-electrolytes'),('/creatine-electrolytes-vs-separate',301,'/creatine-with-electrolytes'),('/best-creatine-electrolyte-mix?utm_source=test',301,'/creatine-with-electrolytes?utm_source=test')]
+        cases=[('/',200,None),('/?utm_source=chatgpt.com',200,None),('/index.html',301,'/'),('/index.html?utm_source=chatgpt.com',301,'/?utm_source=chatgpt.com'),('/guide.html',301,'/guide'),('/guide.html?utm_source=chatgpt.com&x=a%2Fb',301,'/guide?utm_source=chatgpt.com&x=a%2Fb'),('/guide?utm_source=chatgpt.com',200,None),('/create-creatine-monohydrate-gummies-review?utm_source=chatgpt.com',301,'/create-creatine-gummies-review?utm_source=chatgpt.com'),('/absent',404,None),('/?next=/guide.html',200,None),('/best-creatine-electrolyte-mix',301,'/creatine-with-electrolytes'),('/creatine-electrolytes-vs-separate',301,'/creatine-with-electrolytes'),('/best-creatine-electrolyte-mix?utm_source=test',301,'/creatine-with-electrolytes?utm_source=test'),('/creatine-gummies-for-women',301,'/best-creatine-gummies-for-women'),('/creatine-gummies-for-women/',301,'/best-creatine-gummies-for-women'),('/creatine-gummies-for-women?utm_source=google',301,'/best-creatine-gummies-for-women?utm_source=google')]
         for path,code,location in cases:
             actual=request(path);assert actual==(code,location),(path,actual);print('PASS',path,actual)
         actual=request('/guide.html?utm_source=chatgpt.com','www.getgummygains.com')
         assert actual==(301,'https://getgummygains.com/guide.html?utm_source=chatgpt.com'),actual
-        print('PASS www host preserves path and query; 14 scenarios passed')
+        print(f'PASS www host preserves path and query; {len(cases) + 1} scenarios passed')
     finally:
         proc.terminate();proc.communicate(timeout=5)
