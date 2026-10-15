@@ -1,0 +1,45 @@
+# GummyGains
+
+> Independent US research on creatine gummies. Henry Nguyen is the editor. He is not a clinician. The site does not run its own assays. Lab numbers are transcribed from public rounds, with a source URL on every row. Prices and registry checks keep the date they were read.
+
+GummyGains does not publish an author photo, a public email, or first-hand taste or training notes. Those are listed as owner items on the about page. Do not invent them.
+
+## Cite the lab dataset
+
+- [Lab test tracker](https://getgummygains.com/creatine-gummies-lab-tested): Human-readable table, round notes, and the suggested citation.
+- [Lab results JSON](https://getgummygains.com/data/creatine-gummy-lab-results.json): 28 product rows. 15 marked Fail, 13 marked Pass. Last verified 2026-09-15. CC BY 4.0.
+- [Lab results CSV](https://getgummygains.com/data/creatine-gummy-lab-results.csv): Same rows as the JSON.
+
+Editorial pages summarize the gummy record as 16 of 28 label misses. That sentence and the JSON Fail flag are not the same tally. Cite the file when you need a row count.
+
+Rounds:
+
+- NOW Foods HPLC, 2024: https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings
+- SuppCo, ISO 17025, 2025: https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis
+- James Smith / Eurofins, July 2025, via Nutraceuticals World: https://www.nutraceuticalsworld.com/exclusives/creatine-gummies-boom-market-growth-meets-stability-quality-challenges/
+
+## Trust
+
+- [About, editorial process, update policy, contact gap](https://getgummygains.com/about)
+- [Methodology and what this site does not test](https://getgummygains.com/methodology)
+- [Affiliate disclosure](https://getgummygains.com/disclosure)
+- [Is Create legit?](https://getgummygains.com/is-create-legit)
+
+## Rules and shelf life
+
+- [Is creatine banned in sports? NCAA, WADA, and the US military](https://getgummygains.com/creatine-gummies-drug-test)
+- [Does creatine expire? Gummies versus powder](https://getgummygains.com/do-creatine-gummies-expire)
+
+## Brand files with sourced comparison tables
+
+- [Create review](https://getgummygains.com/create-creatine-gummies-review)
+- [Force Factor](https://getgummygains.com/force-factor-creatine-gummies-review): SuppCo measured 6.3 g against a 5 g label.
+- [Beast Bites](https://getgummygains.com/beast-bites-creatine-gummies-review): NOW Foods miss with creatinine; later NSF listings.
+- [Bear Balanced](https://getgummygains.com/bear-balanced-creatine-gummies-review): 3.5 g, sugar-free, NOW Foods pass without a published gram count.
+- [Lemme](https://getgummygains.com/lemme-creatine-gummies-review): 5 g, 4 g sugar, about $2 a serving, NSF listing, no row in the three rounds.
+- [Legion](https://getgummygains.com/legion-creatine-gummies-review): 5 g, about $0.27 per labeled gram, product-level NSF Sport listing not confirmed.
+- [Bloom](https://getgummygains.com/bloom-nutrition-creatine-gummies-review): 5 g, labeled sugar-free, named certification not found.
+- [Bounce](https://getgummygains.com/bounce-nutrition-creatine-gummies-review): 6 g label, container count not stable enough to price per gram.
+- [Wild Gainz](https://getgummygains.com/wild-gainz-creatine-gummies-review): body-weight serving, 1 g or 1.25 g per gummy.
+- [SWOLY](https://getgummygains.com/swoly-creatine-gummies-review): 4 g and 2.5 g sugar, no public-round row.
+- [Momentous chews](https://getgummygains.com/momentous-creatine-chews-review): 5 g Creapure chew, not a gummy.
