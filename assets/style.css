@@ -258,6 +258,12 @@ border-radius:var(--r);padding:12px 14px;margin:18px 0 8px}
 .editor-photo{margin:0 0 16px;max-width:240px}
 .editor-photo img{width:168px;height:auto;border-radius:16px}
 .editor-photo figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.hero-photo{margin:6px 0 0}
+.hero-photo img{width:min(100%,280px);height:auto;border-radius:18px;background:#fff}
+.hero-photo figcaption{color:#C4CCDE;font-size:13px;line-height:1.4;margin-top:8px;max-width:42ch}
+.product-photo{margin:16px 0 20px}
+.product-photo img{width:100%;max-width:420px;height:auto;border-radius:16px;background:#fff}
+.product-photo figcaption{font-size:13.5px;color:var(--muted);line-height:1.45;margin-top:8px;max-width:54ch}
 
 /* ---------- footer ---------- */
 .ftr{background:var(--ink);color:#98A2B8;padding:40px 0 34px;margin-top:50px;font-size:14.5px}
