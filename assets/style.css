@@ -316,3 +316,9 @@ transition:border-color .15s,background .15s,color .15s}
 
 /* Buying-context guidance, October 2026 */
 .ccwc-photo{margin:0}.ccwc-photo img{display:block;width:100%;height:auto;max-height:390px;object-fit:contain;border-radius:16px;background:#fff}.ccwc-photo figcaption{font-size:.85rem;line-height:1.6;color:#b8c3d9;margin-top:12px}.ccwc-photo a{color:#fff;text-decoration:underline}.ccwc-summary{background:#f4f7fc;border-bottom:1px solid #e2e8f0}.ccwc-summary h2,.ccwc-checkout h2{margin-top:0}.ccwc-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:22px 0}.ccwc-actions>a:not(.btn){font-weight:700}.ccwc-routes .card{min-height:180px}.ccwc-checkout{background:#f4f7fc}.ccwc-checkout li{margin-bottom:12px}a:focus-visible,button:focus-visible{outline:3px solid #ff6c42;outline-offset:4px}@media(max-width:600px){.ccwc-actions{align-items:stretch;flex-direction:column}.ccwc-actions .btn{white-space:normal;text-align:center}.ccwc-photo img{max-height:280px}.ccwc-routes .card{min-height:0}}
+
+/* X vs Create box: keep all three columns visible on phones */
+.vs-box table{min-width:0;font-size:14px;table-layout:fixed}
+.vs-box th,.vs-box td{padding:8px 8px;vertical-align:top;word-break:normal;overflow-wrap:anywhere}
+.vs-box th:first-child,.vs-box td:first-child{width:30%;font-weight:600}
+@media(max-width:480px){.vs-box table{font-size:13px}.vs-box th,.vs-box td{padding:7px 6px}}
