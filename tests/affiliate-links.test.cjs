@@ -35,5 +35,5 @@ test('every Create affiliate link uses a page-slot sub-id', () => {
       assert.match(tag, /\btarget="_blank"/);
     }
   }
-  assert.equal(count, 112);
+  assert.equal(count, 114);
 });
