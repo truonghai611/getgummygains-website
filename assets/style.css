@@ -322,3 +322,9 @@ transition:border-color .15s,background .15s,color .15s}
 .vs-box th,.vs-box td{padding:8px 8px;vertical-align:top;word-break:normal;overflow-wrap:anywhere}
 .vs-box th:first-child,.vs-box td:first-child{width:30%;font-weight:600}
 @media(max-width:480px){.vs-box table{font-size:13px}.vs-box th,.vs-box td{padding:7px 6px}}
+
+/* Compact top byline; full reviewer box sits at the end of the article */
+.byline-top{margin:14px 0 0;font-size:13.5px;color:var(--muted);line-height:1.5}
+.byline-top a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.byline-top a:hover{color:var(--cta)}
+.author-end .kicker{margin-bottom:10px}
