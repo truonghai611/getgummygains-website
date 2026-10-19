@@ -56,6 +56,15 @@ server {
     location = /creatine-gummies-for-women { return 301 /best-creatine-gummies-for-women$is_args$args; }
     location = /creatine-gummies-for-women/ { return 301 /best-creatine-gummies-for-women$is_args$args; }
 
+    # Consolidated October 19, 2026 - thin overlapping pages merged into stronger guides.
+    location = /is-creatine-gluten-free { return 301 /gluten-free-creatine-gummies$is_args$args; }
+    location = /creatine-gummies-for-powerlifting-and-strength-training { return 301 /best-creatine-gummies-for-muscle-growth$is_args$args; }
+    location = /creatine-gummies-for-muscle-recovery { return 301 /best-creatine-gummies-for-muscle-growth$is_args$args; }
+    location = /create-creatine-discount-code { return 301 /cheapest-way-to-buy-create-creatine$is_args$args; }
+    location = /do-creatine-gummy-bundles-save-money { return 301 /cheapest-way-to-buy-create-creatine$is_args$args; }
+    location = /state-of-creatine-gummies-2026 { return 301 /creatine-gummies-lab-tested$is_args$args; }
+    location = /30-days-no-missed-creatine-dose { return 301 /best-time-to-take-creatine-gummies$is_args$args; }
+
     # Filenames are not hashed, so avoid year-long immutable caching.
     location ~* \.(?:css|js|mjs)$ {
         add_header Cache-Control "public, max-age=604800";
