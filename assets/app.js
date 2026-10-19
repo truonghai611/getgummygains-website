@@ -126,7 +126,7 @@
       } else if (skipsOften) {
         title = 'Build a routine you can maintain';
         body = 'A reminder and a convenient format may help. Compare the cost and ingredients of gummies with a powder routine before choosing.';
-        code = 'quiz-adherence'; secHref = '/30-days-no-missed-creatine-dose'; secText = 'Build a practical daily routine';
+        code = 'quiz-adherence'; secHref = '/best-time-to-take-creatine-gummies#routine-example'; secText = 'Build a practical daily routine';
       } else {
         title = 'Compare plain powder before paying for gummies';
         body = 'You take creatine at home and rarely miss it. Compare the price per gram and labeled serving of powder with gummies; convenience may not justify a higher price for your routine.';
