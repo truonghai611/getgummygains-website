@@ -16,7 +16,7 @@ function quiz(answers){
 for(const place of ['home','onthego'])for(const frequency of ['rarely','often'])for(const sugar of ['yes','no'])for(const electrolyte of ['yes','no']){
  test(`quiz respects preferences: ${place}/${frequency}/avoid-sugar:${sugar}/electrolytes:${electrolyte}`,()=>{
   const q=quiz([place,frequency,sugar,electrolyte]);
-  const expected=sugar==='yes'?'/sugar-free-creatine-gummies':place==='onthego'?'/creatine-for-travel':frequency==='often'?'/30-days-no-missed-creatine-dose':'/creatine-gummies-vs-powder';
+  const expected=sugar==='yes'?'/sugar-free-creatine-gummies':place==='onthego'?'/creatine-for-travel':frequency==='often'?'/best-time-to-take-creatine-gummies#routine-example':'/creatine-gummies-vs-powder';
   assert.ok(q.result.innerHTML.includes('href="'+expected+'"'));assert.ok(!q.result.innerHTML.includes('trycreate.co'));
   assert.equal(q.events.filter(e=>e[1]==='quiz_complete').length,1);
  });
