@@ -1,0 +1,661 @@
+{
+  "checked": "2026-10-26",
+  "scope": "Static HTML, internal links/fragments/assets, canonical/sitemap, JSON syntax, named literal and Unicode-format marker scan. No classifier; no exhaustive image provenance, medical-claim, ranking or penalty verification.",
+  "pages": 68,
+  "sitemap_urls": 68,
+  "errors": [],
+  "image_literal_scan": {
+    "assets/product/create-starter-bundle-480.webp": [],
+    "assets/product/create-watermelon-pouch-480.webp": [],
+    "assets/product/create-variety-gummy-pouch-960.webp": [],
+    "assets/product/create-watermelon-tub-in-hand.jpg": [],
+    "assets/product/create-watermelon-tub-480.webp": [],
+    "assets/product/create-watermelon-pouch-960.webp": [],
+    "assets/product/create-variety-gummy-pouch-480.webp": [],
+    "assets/product/create-electrolyte-watermelon-960.webp": [],
+    "assets/product/create-blue-raspberry-tub-960.webp": [],
+    "assets/product/create-watermelon-tub-front.jpg": [],
+    "assets/product/create-high-five-bundle-960.webp": [],
+    "assets/product/create-sour-cherry-tub.jpg": [],
+    "assets/product/create-electrolyte-single-480.webp": [],
+    "assets/product/create-sour-cherry-tub-480.webp": [],
+    "assets/product/create-electrolyte-watermelon-480.webp": [],
+    "assets/product/create-electrolyte-trio-960.webp": [],
+    "assets/product/create-watermelon-supplement-facts.jpg": [],
+    "assets/product/create-electrolyte-trio-480.webp": [],
+    "assets/product/create-electrolyte-lemonade-960.webp": [],
+    "assets/product/create-sour-grape-pouch.jpg": [],
+    "assets/product/create-lemonade-3flavors.jpg": [],
+    "assets/product/create-sour-trio-bundle-480.webp": [],
+    "assets/product/create-unflavored-stick-carton-960.webp": [],
+    "assets/product/create-sour-grape-tub.jpg": [],
+    "assets/product/create-unflavored-stick-carton-480.webp": [],
+    "assets/product/create-high-five-bundle-480.webp": [],
+    "assets/product/create-lemonade-variety-pack.jpg": [],
+    "assets/product/create-electrolyte-lemonade-480.webp": [],
+    "assets/product/create-blue-raspberry-tub-480.webp": [],
+    "assets/product/create-electrolyte-single-960.webp": [],
+    "assets/product/create-unflavored-stick-pouch-480.webp": [],
+    "assets/product/create-unflavored-stick-pouch-960.webp": [],
+    "assets/product/create-sour-trio-bundle-960.webp": [],
+    "assets/product/create-orange-tub-960.webp": [],
+    "assets/product/create-orange-tub-480.webp": [],
+    "assets/product/create-starter-bundle-960.webp": [],
+    "assets/product/create-watermelon-tub-960.webp": [],
+    "assets/product/create-sour-cherry-tub-960.webp": []
+  },
+  "rows": [
+    {
+      "file": "about.html",
+      "route": "/about",
+      "title": "About GummyGains: Editor, Process, and Contact",
+      "main_words": 1509,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "are-creatine-gummies-worth-it.html",
+      "route": "/are-creatine-gummies-worth-it",
+      "title": "Are Creatine Gummies Worth the Price? The Real Cost Breakdown",
+      "main_words": 1243,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "arnold-schwarzenegger-creatine-gummies.html",
+      "route": "/arnold-schwarzenegger-creatine-gummies",
+      "title": "Arnold on Creatine Gummies: The Test He Cited, Brand by Brand",
+      "main_words": 942,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "bear-balanced-creatine-gummies-review.html",
+      "route": "/bear-balanced-creatine-gummies-review",
+      "title": "Bear Balanced Creatine Gummies Review (September 2026)",
+      "main_words": 1415,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "beast-bites-creatine-gummies-review.html",
+      "route": "/beast-bites-creatine-gummies-review",
+      "title": "Beast Bites Creatine Gummies Review (September 2026)",
+      "main_words": 1566,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "best-creatine-gummies-2026.html",
+      "route": "/best-creatine-gummies-2026",
+      "title": "Best Creatine Gummies 2026: Labels, Tests & Cost Compared",
+      "main_words": 3572,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "best-creatine-gummies-for-muscle-growth.html",
+      "route": "/best-creatine-gummies-for-muscle-growth",
+      "title": "Best Creatine Gummies for Muscle Growth (What Actually Matters)",
+      "main_words": 2045,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "best-creatine-gummies-for-women.html",
+      "route": "/best-creatine-gummies-for-women",
+      "title": "Creatine Gummies for Women: Labels, Sugar & Cost",
+      "main_words": 1678,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "best-tasting-creatine-gummies.html",
+      "route": "/best-tasting-creatine-gummies",
+      "title": "Best-Tasting Creatine Gummies? Create Flavors Explained",
+      "main_words": 872,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "best-time-to-take-creatine-gummies.html",
+      "route": "/best-time-to-take-creatine-gummies",
+      "title": "Best Time to Take Creatine Gummies (Morning, Night, or Workout?)",
+      "main_words": 1762,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "bloom-nutrition-creatine-gummies-review.html",
+      "route": "/bloom-nutrition-creatine-gummies-review",
+      "title": "Bloom Creatine Gummies Review 2026: Sugar-Free, Unverified",
+      "main_words": 1215,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "bounce-nutrition-creatine-gummies-review.html",
+      "route": "/bounce-nutrition-creatine-gummies-review",
+      "title": "Bounce Creatine Gummies Review 2026: 6g Dose, No Cert",
+      "main_words": 998,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "cheapest-way-to-buy-create-creatine.html",
+      "route": "/cheapest-way-to-buy-create-creatine",
+      "title": "Create Creatine Price, Discount Code & Bundles (2026)",
+      "main_words": 2270,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "create-creatine-black-friday.html",
+      "route": "/create-creatine-black-friday",
+      "title": "Create Creatine Black Friday 2026: Prices to Beat",
+      "main_words": 925,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "create-creatine-gummies-review.html",
+      "route": "/create-creatine-gummies-review",
+      "title": "Create Creatine Gummies Review: Ingredients, Tests & Cost",
+      "main_words": 3507,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "create-vs-bear-balanced.html",
+      "route": "/create-vs-bear-balanced",
+      "title": "Create vs Bear Balanced Creatine Gummies: Full Comparison",
+      "main_words": 1345,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "create-vs-beast-bites.html",
+      "route": "/create-vs-beast-bites",
+      "title": "Create vs Beast Bites Creatine Gummies: Full Comparison",
+      "main_words": 1268,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "create-vs-bloom.html",
+      "route": "/create-vs-bloom",
+      "title": "Create vs Bloom Creatine Gummies: Sugar-Free vs Verified",
+      "main_words": 827,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "create-vs-force-factor.html",
+      "route": "/create-vs-force-factor",
+      "title": "Create vs Force Factor Creatine Gummies: Full Comparison",
+      "main_words": 1215,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "create-vs-lemme.html",
+      "route": "/create-vs-lemme",
+      "title": "Create vs Lemme Creatine Gummies: Dose, Tests & Cost per 5 g",
+      "main_words": 820,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-dose-calculator.html",
+      "route": "/creatine-dose-calculator",
+      "title": "Creatine Gummy Cost Calculator: Per Serving and Per 5 g",
+      "main_words": 418,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-for-travel.html",
+      "route": "/creatine-for-travel",
+      "title": "Creatine for Travel: Gummies vs. Stick Packs (2026)",
+      "main_words": 1168,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-and-alcohol.html",
+      "route": "/creatine-gummies-and-alcohol",
+      "title": "Creatine Gummies and Alcohol: Is There Actually an Interaction?",
+      "main_words": 902,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-and-caffeine-pre-workout.html",
+      "route": "/creatine-gummies-and-caffeine-pre-workout",
+      "title": "Creatine Gummies and Caffeine: Does Coffee Cancel Them?",
+      "main_words": 890,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-dosage.html",
+      "route": "/creatine-gummies-dosage",
+      "title": "Creatine Gummies Dosage: How Many Do You Need?",
+      "main_words": 1268,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-drug-test.html",
+      "route": "/creatine-gummies-drug-test",
+      "title": "Is Creatine Banned in Sports? NCAA, WADA, and the Military",
+      "main_words": 1807,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-faq.html",
+      "route": "/creatine-gummies-faq",
+      "title": "Creatine Gummies FAQ: 20 Common Questions Answered",
+      "main_words": 2833,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-for-beginners.html",
+      "route": "/creatine-gummies-for-beginners",
+      "title": "Creatine Gummies for Beginners: Complete Guide",
+      "main_words": 1046,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-for-brain-health.html",
+      "route": "/creatine-gummies-for-brain-health",
+      "title": "Creatine Gummies for Brain & Memory: What 16 Trials Found",
+      "main_words": 1114,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-for-menopause.html",
+      "route": "/creatine-gummies-for-menopause",
+      "title": "Creatine Gummies for Menopause: What the Trials Show (2026)",
+      "main_words": 1404,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-for-older-adults.html",
+      "route": "/creatine-gummies-for-older-adults",
+      "title": "Creatine Gummies for Older Adults: Dosing and Safety",
+      "main_words": 965,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-for-runners-and-endurance-athletes.html",
+      "route": "/creatine-gummies-for-runners-and-endurance-athletes",
+      "title": "Creatine Gummies for Runners: Does It Actually Help?",
+      "main_words": 1010,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-for-weight-loss.html",
+      "route": "/creatine-gummies-for-weight-loss",
+      "title": "Creatine Gummies for Weight Loss: What Research Shows",
+      "main_words": 1013,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-fsa-hsa-eligible.html",
+      "route": "/creatine-gummies-fsa-hsa-eligible",
+      "title": "Are Creatine Gummies FSA or HSA Eligible? Usually Not",
+      "main_words": 870,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-hair-loss.html",
+      "route": "/creatine-gummies-hair-loss",
+      "title": "Do Creatine Gummies Cause Hair Loss? What the 2025 Trial Found",
+      "main_words": 1033,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-lab-tested.html",
+      "route": "/creatine-gummies-lab-tested",
+      "title": "Creatine Gummy Lab Test Tracker: Every Brand Tested, Updated Monthly",
+      "main_words": 3883,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-recall-and-safety-check.html",
+      "route": "/creatine-gummies-recall-and-safety-check",
+      "title": "Creatine Gummy Recalls: How to Check Your Brand",
+      "main_words": 1058,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-return-policy.html",
+      "route": "/creatine-gummies-return-policy",
+      "title": "Can You Return Creatine Gummies?",
+      "main_words": 1330,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-side-effects.html",
+      "route": "/creatine-gummies-side-effects",
+      "title": "Creatine Gummies Side Effects: What's Real, What's a Myth",
+      "main_words": 1707,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-vs-capsules.html",
+      "route": "/creatine-gummies-vs-capsules",
+      "title": "Creatine Gummies vs. Capsules: Which Should You Buy?",
+      "main_words": 1065,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-vs-chews.html",
+      "route": "/creatine-gummies-vs-chews",
+      "title": "Creatine Gummies vs. Chews: What's Actually the Difference",
+      "main_words": 949,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-vs-powder.html",
+      "route": "/creatine-gummies-vs-powder",
+      "title": "Creatine Gummies vs. Powder: Cost, Sugar and Dose",
+      "main_words": 1219,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-vs-stick-packs.html",
+      "route": "/creatine-gummies-vs-stick-packs",
+      "title": "Creatine Gummies vs Stick Packs: Dose, Cost & Convenience",
+      "main_words": 1020,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-gummies-while-fasting.html",
+      "route": "/creatine-gummies-while-fasting",
+      "title": "Do Creatine Gummies Break a Fast? What the Sugar Actually Does",
+      "main_words": 927,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-impurities-dcd-dht.html",
+      "route": "/creatine-impurities-dcd-dht",
+      "title": "Creatine Impurities: DCD, DHT and Who Publishes Limits",
+      "main_words": 1269,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-to-creatinine.html",
+      "route": "/creatine-to-creatinine",
+      "title": "Creatine to Creatinine: The Reaction Behind Every Failed Gummy Test",
+      "main_words": 3205,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "creatine-with-electrolytes.html",
+      "route": "/creatine-with-electrolytes",
+      "title": "Creatine with Electrolytes: Create Mix vs Plain Creatine",
+      "main_words": 1310,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "disclosure.html",
+      "route": "/disclosure",
+      "title": "Affiliate Disclosure",
+      "main_words": 361,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "do-creatine-gummies-expire.html",
+      "route": "/do-creatine-gummies-expire",
+      "title": "Does Creatine Expire? Gummies vs Powder",
+      "main_words": 1916,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "do-creatine-gummies-work.html",
+      "route": "/do-creatine-gummies-work",
+      "title": "Do Creatine Gummies Actually Work? The Evidence",
+      "main_words": 1164,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "force-factor-creatine-gummies-review.html",
+      "route": "/force-factor-creatine-gummies-review",
+      "title": "Force Factor Creatine Gummies Review 2026: NSF, Full 5g",
+      "main_words": 1240,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "gluten-free-creatine-gummies.html",
+      "route": "/gluten-free-creatine-gummies",
+      "title": "Gluten-Free Creatine Gummies: Check the Label Claim",
+      "main_words": 1857,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "how-long-do-creatine-gummies-take-to-work.html",
+      "route": "/how-long-do-creatine-gummies-take-to-work",
+      "title": "How Long Creatine Gummies Take to Work, Week by Week",
+      "main_words": 1129,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "how-much-should-creatine-gummies-cost.html",
+      "route": "/how-much-should-creatine-gummies-cost",
+      "title": "Creatine Gummies Cost: Price Per Dose (2026)",
+      "main_words": 1627,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "index.html",
+      "route": "/",
+      "title": "Creatine Gummies: Reviews, Lab Tests & Cost | GummyGains",
+      "main_words": 1682,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "is-create-legit.html",
+      "route": "/is-create-legit",
+      "title": "Is Create Legit? Lab Tests, NSF, and the Lawsuits",
+      "main_words": 1309,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "legion-creatine-gummies-review.html",
+      "route": "/legion-creatine-gummies-review",
+      "title": "Legion Creatine Gummies Review: 5 g, Cert Not Confirmed",
+      "main_words": 1055,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "lemme-creatine-gummies-review.html",
+      "route": "/lemme-creatine-gummies-review",
+      "title": "Lemme Creatine Gummies Review: NSF Certified, Higher Price",
+      "main_words": 1069,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "maya.html",
+      "route": "/maya",
+      "title": "Maya Checks Labels: Sources & Calculator | GummyGains",
+      "main_words": 306,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "methodology.html",
+      "route": "/methodology",
+      "title": "How We Evaluate Creatine Gummies — Methodology",
+      "main_words": 1207,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "momentous-creatine-chews-review.html",
+      "route": "/momentous-creatine-chews-review",
+      "title": "Momentous Creatine Chews Review 2026: NSF, Not a Gummy",
+      "main_words": 1047,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "nsf-certified-creatine-gummies.html",
+      "route": "/nsf-certified-creatine-gummies",
+      "title": "NSF Certified Creatine Gummies: Check Exact Products | GummyGains",
+      "main_words": 673,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "omni-creatine-gummies-review.html",
+      "route": "/omni-creatine-gummies-review",
+      "title": "OMNI Creatine Gummies Review: 3 g Dose, Testing & Side Effects",
+      "main_words": 1467,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "sugar-free-creatine-gummies.html",
+      "route": "/sugar-free-creatine-gummies",
+      "title": "Sugar-Free Creatine Gummies: Which Brands Skip the Sugar",
+      "main_words": 1838,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "swoly-creatine-gummies-review.html",
+      "route": "/swoly-creatine-gummies-review",
+      "title": "SWOLY Creatine Gummies Review 2026: Worth Buying?",
+      "main_words": 1145,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "vegan-creatine-gummies.html",
+      "route": "/vegan-creatine-gummies",
+      "title": "Vegan Creatine Gummies 2026: Which Brands Are Actually Verified",
+      "main_words": 1043,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "where-to-buy-create-creatine-gummies.html",
+      "route": "/where-to-buy-create-creatine-gummies",
+      "title": "Where to Buy Create Creatine Gummies: Target, Walmart, GNC",
+      "main_words": 1135,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    },
+    {
+      "file": "wild-gainz-creatine-gummies-review.html",
+      "route": "/wild-gainz-creatine-gummies-review",
+      "title": "Wild Gainz Creatine Gummies Review 2026: The Dosing Catch",
+      "main_words": 1009,
+      "format_characters": [],
+      "provenance_marker_matches": [],
+      "issues": []
+    }
+  ]
+}
