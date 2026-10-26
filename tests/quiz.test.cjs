@@ -16,14 +16,14 @@ function quiz(answers){
 for(const place of ['home','onthego'])for(const frequency of ['rarely','often'])for(const sugar of ['yes','no'])for(const electrolyte of ['yes','no']){
  test(`quiz respects preferences: ${place}/${frequency}/avoid-sugar:${sugar}/electrolytes:${electrolyte}`,()=>{
   const q=quiz([place,frequency,sugar,electrolyte]);
-  const expected=sugar==='yes'?'/sugar-free-creatine-gummies':place==='onthego'?'/creatine-for-travel':frequency==='often'?'/best-time-to-take-creatine-gummies#routine-example':'/creatine-gummies-vs-powder';
+  const expected=sugar==='yes'?'/sugar-free-creatine-gummies':place==='onthego'?'/creatine-gummies-vs-stick-packs#travel':frequency==='often'?'/best-time-to-take-creatine-gummies#routine-example':'/creatine-gummies-vs-powder';
   assert.ok(q.result.innerHTML.includes('href="'+expected+'"'));assert.ok(!q.result.innerHTML.includes('trycreate.co'));
   assert.equal(q.events.filter(e=>e[1]==='quiz_complete').length,1);
  });
 }
 test('changing an earlier answer replaces the result and CTA',()=>{
- const q=quiz(['onthego','often','no','no']);assert.ok(q.result.innerHTML.includes('/creatine-for-travel'));
- q.choose('3','yes');assert.ok(q.result.innerHTML.includes('/sugar-free-creatine-gummies'));assert.ok(!q.result.innerHTML.includes('href="/creatine-for-travel"'));
+ const q=quiz(['onthego','often','no','no']);assert.ok(q.result.innerHTML.includes('/creatine-gummies-vs-stick-packs#travel'));
+ q.choose('3','yes');assert.ok(q.result.innerHTML.includes('/sugar-free-creatine-gummies'));assert.ok(!q.result.innerHTML.includes('href="/creatine-gummies-vs-stick-packs#travel"'));
 });
 
 test('quiz exposes one pressed option per answered question',()=>{const q=quiz(['home','rarely','no','no']);q.choose('1','onthego');for(const n of ['1','2','3','4'])assert.equal(q.buttons.filter(b=>b.q===n&&b.attrs['aria-pressed']==='true').length,1);});

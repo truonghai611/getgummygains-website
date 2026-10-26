@@ -65,6 +65,16 @@ server {
     location = /state-of-creatine-gummies-2026 { return 301 /creatine-gummies-lab-tested$is_args$args; }
     location = /30-days-no-missed-creatine-dose { return 301 /best-time-to-take-creatine-gummies$is_args$args; }
 
+    # Consolidated October 26, 2026 - weak overlapping pages merged into stronger pages.
+    location = /bear-balanced-creatine-gummies-review { return 301 /create-vs-bear-balanced$is_args$args; }
+    location = /beast-bites-creatine-gummies-review { return 301 /create-vs-beast-bites$is_args$args; }
+    location = /creatine-impurities-dcd-dht { return 301 /creatine-gummies-lab-tested$is_args$args; }
+    location = /creatine-for-travel { return 301 /creatine-gummies-vs-stick-packs$is_args$args; }
+    location = /creatine-gummies-return-policy { return 301 /cheapest-way-to-buy-create-creatine$is_args$args; }
+    location = /are-creatine-gummies-worth-it { return 301 /how-much-should-creatine-gummies-cost$is_args$args; }
+    location = /best-tasting-creatine-gummies { return 301 /create-creatine-gummies-review$is_args$args; }
+    location = /bounce-nutrition-creatine-gummies-review { return 301 /best-creatine-gummies-2026$is_args$args; }
+
     # Filenames are not hashed, so avoid year-long immutable caching.
     location ~* \.(?:css|js|mjs)$ {
         add_header Cache-Control "public, max-age=604800";

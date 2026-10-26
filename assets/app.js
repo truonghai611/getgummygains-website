@@ -122,7 +122,7 @@
       } else if (onTheGo) {
         title = 'Compare formats that are easy to carry';
         body = hasElectrolyte ? 'You already use an electrolyte product. Compare a separate creatine format before adding another combination product.' : 'Compare gummies and single-serve powder for portability. Being on the go does not by itself mean you need added electrolytes.';
-        code = 'quiz-travel'; secHref = '/creatine-for-travel'; secText = 'Compare travel-friendly formats';
+        code = 'quiz-travel'; secHref = '/creatine-gummies-vs-stick-packs#travel'; secText = 'Compare travel-friendly formats';
       } else if (skipsOften) {
         title = 'Build a routine you can maintain';
         body = 'A reminder and a convenient format may help. Compare the cost and ingredients of gummies with a powder routine before choosing.';
