@@ -1,9 +1,26 @@
 /* Google tag (gtag.js) — GA4 property for getgummygains.com */
 (function () {
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C0MW3RSC76';
-  document.head.appendChild(s);
+  // Load gtag.js after the page is idle so it does not hold up the main
+  // thread on phones. Events queue in dataLayer until it arrives; a first
+  // tap or key press loads it at once so early outbound clicks still send.
+  var loaded = false;
+  function loadTag() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C0MW3RSC76';
+    document.head.appendChild(s);
+  }
+  function whenIdle() {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadTag, { timeout: 3000 });
+    else setTimeout(loadTag, 1500);
+  }
+  if (document.readyState === 'complete') whenIdle();
+  else window.addEventListener('load', whenIdle);
+  ['pointerdown', 'keydown'].forEach(function (t) {
+    window.addEventListener(t, loadTag, { once: true, passive: true });
+  });
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   window.gtag = gtag;
