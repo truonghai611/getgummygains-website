@@ -20,6 +20,10 @@ server {
     # port (${PORT}), so nginx must not bake that port into redirect
     # Location headers - keep them relative (path-only).
     absolute_redirect off;
+
+    # HSTS. Railway serves HTTPS only. Repeated in each location below that sets
+    # its own add_header, because nginx drops server-level headers there.
+    add_header Strict-Transport-Security "max-age=31536000" always;
     # Consolidate hosts: force www to redirect to the canonical apex domain.
     if ($host = "www.getgummygains.com") {
         return 301 https://getgummygains.com$request_uri;
@@ -78,16 +82,19 @@ server {
     # Filenames are not hashed, so avoid year-long immutable caching.
     location ~* \.(?:css|js|mjs)$ {
         add_header Cache-Control "public, max-age=604800";
+        add_header Strict-Transport-Security "max-age=31536000" always;
         try_files $uri =404;
     }
 
     location ~* \.(?:png|jpe?g|gif|webp|svg|ico|avif|woff2?)$ {
         add_header Cache-Control "public, max-age=2592000";
+        add_header Strict-Transport-Security "max-age=31536000" always;
         try_files $uri =404;
     }
 
     location ~* \.(?:json|xml|txt)$ {
         add_header Cache-Control "public, max-age=3600";
+        add_header Strict-Transport-Security "max-age=31536000" always;
         try_files $uri =404;
     }
 

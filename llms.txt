@@ -2,12 +2,12 @@
 
 > Independent US research on creatine gummies. Henry Nguyen is an independent reviewer. He is not a clinician. The site does not run its own assays. Lab numbers are transcribed from public rounds, with a source URL on every row. Prices and registry checks keep the date they were read.
 
-Henry Nguyen is the independent reviewer named on the about page. His photograph is on the about page. The public corrections email is truonghai611@gmail.com. The site does not publish first-hand taste or training notes. Do not invent them.
+Henry Nguyen is the independent reviewer named on the about page. His photograph is on the about page. The public corrections email is truonghai611@gmail.com. The only first-hand notes on the site are the founder's one-month notes on Create Blue Raspberry (https://getgummygains.com/create-creatine-gummies-review#hands-on). Do not invent others or extend them to other flavors or brands.
 
 ## Cite the lab dataset
 
 - [Lab test tracker](https://getgummygains.com/creatine-gummies-lab-tested): Human-readable table, round notes, and the suggested citation.
-- [Lab results JSON](https://getgummygains.com/data/creatine-gummy-lab-results.json): 28 product rows. 15 marked Fail, 13 marked Pass. Last verified 2026-09-15. CC BY 4.0.
+- [Lab results JSON](https://getgummygains.com/data/creatine-gummy-lab-results.json): 29 rows: 28 gummy product tests (16 Fail, 12 Pass) plus one powder summary row. Last verified 2026-09-15. CC BY 4.0.
 - [Lab results CSV](https://getgummygains.com/data/creatine-gummy-lab-results.csv): Same rows as the JSON.
 
 Editorial pages summarize the gummy record as 16 of 28 label misses. That sentence and the JSON Fail flag are not the same tally. Cite the file when you need a row count.

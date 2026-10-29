@@ -201,6 +201,21 @@
       "notes": "Did not meet label claim"
     },
     {
+      "product": "Seventh failing brand (name not published)",
+      "brand": "Not published",
+      "round": "Round 1",
+      "lab": "NOW Foods (HPLC)",
+      "test_date": "2024",
+      "label_claim": "",
+      "measured": "",
+      "creatinine_flagged": "no",
+      "result": "Fail",
+      "nsf_certified_for_sport_gummy_listings": "",
+      "nsf_checked_on": "",
+      "source_url": "https://www.nowfoods.com/about-now/press-room/press-releases/now-testing-program-identifies-creatine-gummies-failings",
+      "notes": "NOW reported 13 brands tested and 7 failing; press coverage names only six of the failing brands"
+    },
+    {
       "product": "Force Factor creatine gummies",
       "brand": "Force Factor",
       "round": "Round 2",
@@ -467,5 +482,6 @@
       "gummies_per_container": 90,
       "photo": "https://getgummygains.com/assets/product/create-watermelon-supplement-facts.jpg"
     }
-  ]
+  ],
+  "row_note": "29 rows: 28 gummy product tests (16 Fail, 12 Pass) plus one Round 2 row summarizing the five powders tested alongside (Pass)."
 }
