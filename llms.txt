@@ -10,7 +10,7 @@ Henry Nguyen is the independent reviewer named on the about page. His photograph
 - [Lab results JSON](https://getgummygains.com/data/creatine-gummy-lab-results.json): 29 rows: 28 gummy product tests (16 Fail, 12 Pass) plus one powder summary row. Last verified 2026-09-15. CC BY 4.0.
 - [Lab results CSV](https://getgummygains.com/data/creatine-gummy-lab-results.csv): Same rows as the JSON.
 
-Editorial pages summarize the gummy record as 16 of 28 label misses. That sentence and the JSON Fail flag are not the same tally. Cite the file when you need a row count.
+Editorial pages and the JSON agree: 16 of 28 gummy product tests are marked Fail.
 
 Rounds:
 
