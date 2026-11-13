@@ -15,6 +15,7 @@ Every Create link on this site is:
 | `sticky` | Sticky bar |
 | `checkout` | “Before you leave to buy” checkout check |
 | `source` | Citation or source sentence that is not a button |
+| `shortanswer` | "Short answer: which gummies passed?" box near the top (4 pages). Buttons also carry `data-placement="<slug>-top"` (Create) and `<slug>-top-ff` (Force Factor Amazon, tag getgummygai0c-20); GA4 sends it as `placement`. Amazon links with that tag now fire `affiliate_outbound_click` too. |
 
 `data-link-id` is the same string as `q`. GA4 `affiliate_outbound_click` sends that string as `q` and as `link_id`. `link_url` stays the path only (`https://trycreate.co/15-9KD`), so other query parameters are not copied onto the event. Incoming UTMs on getgummygains.com are not added to the Create URL.
 

@@ -5,7 +5,7 @@ const path = require('node:path');
 
 const root = path.join(__dirname, '..');
 const opaque = ['3iMQkwu8', 'f6pm1xJY', 'RiOuVi3a', 'X6x5Vzeg', 'QFmoNEA1'];
-const slotPattern = /^(hero|card|inline|sticky|checkout|source)$/;
+const slotPattern = /^(hero|card|inline|sticky|checkout|source|shortanswer)$/;
 
 test('every Create affiliate link uses a page-slot sub-id', () => {
   const files = fs.readdirSync(root).filter((name) => name.endsWith('.html'));
@@ -35,5 +35,5 @@ test('every Create affiliate link uses a page-slot sub-id', () => {
       assert.match(tag, /\btarget="_blank"/);
     }
   }
-  assert.equal(count, 117);
+  assert.equal(count, 121);
 });

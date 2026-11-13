@@ -293,7 +293,8 @@
       var createAffiliate = /^(www\.)?trycreate\.co$/.test(destination.hostname) && destination.pathname === '/15-9KD';
       var bulkAffiliate = /(^|\.)bulksupplements\.com$/.test(destination.hostname) &&
         /(^|\s)sponsored(\s|$)/.test(a.getAttribute('rel') || '');
-      if (!createAffiliate && !bulkAffiliate) { return; }
+      var amazonAffiliate = /(^|\.)amazon\.com$/.test(destination.hostname) && destination.searchParams.get('tag') === 'getgummygai0c-20';
+      if (!createAffiliate && !bulkAffiliate && !amazonAffiliate) { return; }
       var position = 'inline';
       if (a.closest('.sticky')) { position = 'sticky'; }
       else if (a.closest('.pick')) { position = 'product_card'; }
@@ -306,6 +307,7 @@
         link_url: destination.origin + destination.pathname,
         q: destination.searchParams.get('q') || '',
         cta_position: position,
+        placement: a.getAttribute('data-placement') || '',
         link_text: (a.textContent || '').trim().slice(0, 60),
         transport_type: 'beacon'
       }, sourceContext));
