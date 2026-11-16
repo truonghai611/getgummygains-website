@@ -22,6 +22,16 @@ test('every Create affiliate link uses a page-slot sub-id', () => {
       const href = (tag.match(/\bhref="([^"]*)"/) || [])[1] || '';
       if (!href.includes('trycreate.co')) continue;
       count += 1;
+      if (href === 'https://trycreate.co/15-9KD?q=create-bundles') {
+        // portal redirect link to Create's bundle page; one shared q, per-page data-link-id
+        const id = (tag.match(/\bdata-link-id="([^"]*)"/) || [])[1];
+        assert.equal(id, `${slug}-bundle`, tag);
+        assert.equal(seen.has(id), false, `duplicate ${id}`);
+        seen.add(id);
+        assert.match(tag, /\brel="[^"]*\bsponsored\b/);
+        assert.match(tag, /\btarget="_blank"/);
+        continue;
+      }
       const match = href.match(/^https:\/\/trycreate\.co\/15-9KD\?q=([a-z0-9-]+)$/);
       assert.ok(match, `${file} href ${href}`);
       const q = match[1];
@@ -35,5 +45,5 @@ test('every Create affiliate link uses a page-slot sub-id', () => {
       assert.match(tag, /\btarget="_blank"/);
     }
   }
-  assert.equal(count, 121);
+  assert.equal(count, 126);
 });

@@ -194,3 +194,6 @@ Links on those pages that had no `q` before (checkout buttons, and some source o
 | `is-create-legit` | `is-create-legit-source` |  |  |
 | `is-create-legit` | `is-create-legit-inline` |  |  |
 | `is-create-legit` | `is-create-legit-sticky` |  |  |
+
+## Bundle link (16 Nov 2026)
+`https://trycreate.co/15-9KD?q=create-bundles` is a Superfiliate redirect link (portal "Create new", destination https://trycreate.co/products/create-bundles; verified it lands on the bundle page with attribution params). One shared q; separate pages tell apart by `data-link-id` = `<page-slug>-bundle` and GA4 `placement` = `<page-slug>-top-bundle`. Used on lab-tested, create-creatine-gummies-review, create-vs-bear-balanced, do-creatine-gummies-expire (short-answer box) and best-creatine-gummies-2026 (key facts).
