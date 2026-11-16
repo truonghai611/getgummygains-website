@@ -314,3 +314,27 @@
     });
   }
 })();
+
+/* Copy-to-clipboard for promo codes (button.copy-code[data-copy]) */
+(function () {
+  'use strict';
+  window.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('.copy-code');
+    if (!btn || !btn.getAttribute || btn.getAttribute('data-copy') == null) return;
+    var code = btn.getAttribute('data-copy');
+    function done() {
+      var old = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = old; }, 1600);
+      if (window.gtag) window.gtag('event', 'copy_promo_code', { code: code, page_path: location.pathname });
+    }
+    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(done, function () {});
+    } else {
+      var t = document.createElement('textarea');
+      t.value = code; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (err) {}
+      document.body.removeChild(t);
+    }
+  });
+})();
