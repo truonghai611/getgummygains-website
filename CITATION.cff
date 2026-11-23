@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Creatine Gummy Lab Test Tracker"
+authors:
+  - name: "GummyGains"
+  - family-names: "Nguyen"
+    given-names: "Henry"
+license: CC-BY-4.0
+url: "https://getgummygains.com/creatine-gummies-lab-tested"
+repository-code: "https://github.com/truonghai611/getgummygains-website"
+date-released: 2026-11-23
+keywords:
+  - creatine
+  - dietary supplements
+  - label accuracy

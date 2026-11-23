@@ -1,0 +1,9 @@
+{
+  "title": "Creatine Gummy Lab Test Tracker",
+  "subtitle": "Every public independent lab test of creatine gummies, 2024-2025",
+  "id": "REPLACE_WITH_KAGGLE_USERNAME/creatine-gummy-lab-tests",
+  "licenses": [{"name": "CC-BY-4.0"}],
+  "keywords": ["health", "nutrition", "food"],
+  "description": "Compilation of the three public independent lab rounds on creatine gummies (NOW Foods HPLC 2024, SuppCo ISO 17025 2025, James Smith / Eurofins 2025): label claim, measured creatine, pass/fail, creatinine flags and an NSF Certified for Sport cross-check. Each row links to the lab's own report. Live version and methodology: https://getgummygains.com/creatine-gummies-lab-tested",
+  "resources": [{"path": "creatine-gummy-lab-results.csv", "description": "One row per product test"}]
+}
