@@ -25,6 +25,7 @@ NSF Certified for Sport registry cross-check.
 - **Rows:** 29 (28 gummy product tests: 12 Pass, 16 Fail, plus one pooled row for the five powders tested in Round 2)
 - **Sources:** NOW Foods HPLC round (2024), SuppCo ISO 17025 round (2025), James Smith / Eurofins round (July 2025). Every row carries its `source_url`.
 - **Maintained by:** GummyGains (Henry Nguyen). Live table and methodology: https://getgummygains.com/creatine-gummies-lab-tested
+- **DOI:** [10.5281/zenodo.24452623](https://doi.org/10.5281/zenodo.24452623)
 - **License:** CC BY 4.0. Attribute as "GummyGains Creatine Gummy Lab Test Tracker" with a link to https://getgummygains.com/creatine-gummies-lab-tested. The measurements belong to the labs named on each row.
 
 ## Columns
