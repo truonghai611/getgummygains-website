@@ -61,6 +61,16 @@
   if (calc) {
     var $ = function (id) { return document.getElementById(id); };
     var fields = ['c-price', 'c-count', 'c-per', 'c-target'];
+    var shareKeys = ['price', 'count', 'grams', 'serving'];
+    var shareBox = $('c-share');
+    var shareLink = $('c-share-link');
+    function readSharedValues() {
+      var incoming = new URLSearchParams(location.hash.slice(1));
+      var shared = shareKeys.map(function (key) { return Number(incoming.get(key)); });
+      if (window.gummyLabelCost.apply(null, shared)) {
+        fields.forEach(function (id, index) { $(id).value = shared[index]; });
+      }
+    }
     var fmt = function (n) {
       return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     };
@@ -71,6 +81,17 @@
         Number($('c-per').value), Number($('c-target').value));
       var out = $('c-out'), grams = $('c-gummies'), servings = $('c-days');
       var normalized = $('c-normalized'), verdict = $('c-verdict');
+      if (shareBox && shareLink) {
+        shareBox.hidden = !result;
+        shareLink.value = '';
+        if (result) {
+          var url = new URL(location.pathname, location.origin);
+          var params = new URLSearchParams();
+          fields.forEach(function (id, index) { params.set(shareKeys[index], $(id).value); });
+          url.hash = params.toString();
+          shareLink.value = url.href;
+        }
+      }
       if (!result) {
         out.textContent = grams.textContent = servings.textContent = normalized.textContent = '—';
         verdict.textContent = 'Enter positive values. Unit counts must be whole numbers, with at least one complete labeled serving in the container.';
@@ -98,6 +119,13 @@
       });
     });
 
+    if (shareBox && shareLink) {
+      readSharedValues();
+      window.addEventListener('hashchange', function () {
+        readSharedValues();
+        run();
+      });
+    }
     run();
   }
 
