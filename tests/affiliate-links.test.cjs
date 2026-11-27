@@ -47,3 +47,19 @@ test('every Create affiliate link uses a page-slot sub-id', () => {
   }
   assert.equal(count, 138);
 });
+
+test('Create purchase links and sticky banners do not promise a fixed discount', () => {
+  const files = fs.readdirSync(root).filter((name) => name.endsWith('.html'));
+  const percentage = /\d\s*(?:%|&percnt;|&#0*37;|&#x0*25;|percent\b)/i;
+  for (const file of files) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    for (const [, attrs, label] of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+      if (!/\bhref="https:\/\/trycreate\.co\/15-9KD\b/i.test(attrs)) continue;
+      const accessibleLabel = attrs.match(/\baria-label="([^"]*)"/i)?.[1] || '';
+      assert.doesNotMatch(label.replace(/<[^>]+>/g, '') + ' ' + accessibleLabel, percentage, file);
+    }
+    for (const [, caption] of html.matchAll(/<div class="sticky-txt">([\s\S]*?)<\/div>/gi)) {
+      assert.doesNotMatch(caption.replace(/<[^>]+>/g, ''), percentage, file);
+    }
+  }
+});
